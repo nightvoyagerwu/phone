@@ -26,10 +26,14 @@ const elements = {
     // 模态框
     addPhoneModal: document.getElementById('addPhoneModal'),
     compareModal: document.getElementById('compareModal'),
+    editPhoneModal: document.getElementById('editPhoneModal'),
     closeAddModal: document.getElementById('closeAddModal'),
     closeCompareModal: document.getElementById('closeCompareModal'),
+    closeEditModal: document.getElementById('closeEditModal'),
     addPhoneForm: document.getElementById('addPhoneForm'),
+    editPhoneForm: document.getElementById('editPhoneForm'),
     cancelAddBtn: document.getElementById('cancelAddBtn'),
+    cancelEditBtn: document.getElementById('cancelEditBtn'),
     toast: document.getElementById('toast')
 };
 
@@ -108,7 +112,10 @@ function saveUserAddedPhones() {
 // 绑定事件监听器
 function bindEventListeners() {
     // 搜索功能
-    elements.searchInput.addEventListener('input', debounce(applyFilters, 300));
+    elements.searchInput.addEventListener('input', function() {
+        console.log('搜索输入:', this.value);
+        debounce(applyFilters, 300)();
+    });
     
     // 筛选器
     elements.brandFilter.addEventListener('change', applyFilters);
@@ -126,9 +133,14 @@ function bindEventListeners() {
     elements.addPhoneForm.addEventListener('submit', handleAddPhone);
     elements.cancelAddBtn.addEventListener('click', hideAddPhoneModal);
     
+    // 编辑手机
+    elements.editPhoneForm.addEventListener('submit', handleEditPhone);
+    elements.cancelEditBtn.addEventListener('click', hideEditPhoneModal);
+    
     // 模态框关闭
     elements.closeAddModal.addEventListener('click', hideAddPhoneModal);
     elements.closeCompareModal.addEventListener('click', hideCompareModal);
+    elements.closeEditModal.addEventListener('click', hideEditPhoneModal);
     
     // 数据导入导出
     elements.exportDataBtn.addEventListener('click', exportData);
@@ -142,6 +154,9 @@ function bindEventListeners() {
         }
         if (event.target === elements.compareModal) {
             hideCompareModal();
+        }
+        if (event.target === elements.editPhoneModal) {
+            hideEditPhoneModal();
         }
     });
 }
@@ -197,7 +212,18 @@ function getPriceValue(priceObj) {
     
     // 如果是嵌套结构
     if (priceObj.start_price && typeof priceObj.start_price === 'object') {
-        return priceObj.start_price.starting_price || 0;
+        // 如果有starting_price字段
+        if (priceObj.start_price.starting_price) {
+            const price = priceObj.start_price.starting_price;
+            if (typeof price === 'number') {
+                return price;
+            }
+            // 如果是字符串，尝试提取数字
+            const numMatch = price.toString().match(/\d+/);
+            return numMatch ? parseInt(numMatch[0]) : 0;
+        }
+        // 如果是其他对象结构，返回0
+        return 0;
     }
     
     // 如果是直接数字
@@ -206,6 +232,64 @@ function getPriceValue(priceObj) {
     }
     
     return 0;
+}
+
+// 获取详细价格信息
+function getDetailedPriceInfo(phone) {
+    if (!phone.price || !phone.price.start_price) {
+        return null;
+    }
+    
+    const startPrice = phone.price.start_price;
+    
+    // 如果是对象结构且包含详细价格信息
+    if (typeof startPrice === 'object') {
+        const priceVariants = [];
+        
+        // 检查是否有storage_variants
+        if (startPrice.storage_variants) {
+            Object.entries(startPrice.storage_variants).forEach(([config, price]) => {
+                priceVariants.push({
+                    config: config.replace('+', 'G+') + 'G',
+                    price: price
+                });
+            });
+        }
+        
+        // 检查是否有直接的价格配置（如"12GB+256GB": "5699元"）
+        Object.entries(startPrice).forEach(([key, value]) => {
+            if (key !== 'starting_price' && key !== 'currency' && key !== 'storage_variants' && typeof value === 'string') {
+                const config = key.replace(/(\d+)GB\+(\d+)/, '$1G+$2G').replace(/(\d+)\+(\d+)/, '$1G+$2G');
+                priceVariants.push({
+                    config: config,
+                    price: value
+                });
+            }
+        });
+        
+        return priceVariants.length > 0 ? priceVariants : null;
+    }
+    
+    return null;
+}
+
+// 格式化价格显示
+function formatPriceDisplay(phone) {
+    const basePrice = getPriceValue(phone.price);
+    const detailedPrices = getDetailedPriceInfo(phone);
+    
+    if (detailedPrices && detailedPrices.length > 0) {
+        // 显示详细价格
+        const priceList = detailedPrices.map(variant => 
+            `<div class="price-variant">${variant.config} ${variant.price}</div>`
+        ).join('');
+        return priceList;
+    } else if (basePrice > 0) {
+        // 显示起售价
+        return `起售价 ¥${basePrice.toLocaleString()}`;
+    } else {
+        return '价格未知';
+    }
 }
 
 // 获取充电信息（处理嵌套结构）
@@ -330,7 +414,7 @@ function displayPhones(phones) {
 // 创建手机卡片
 function createPhoneCard(phone) {
     const isSelected = selectedPhones.some(selected => selected.id === phone.id);
-    const price = getPriceValue(phone.price) > 0 ? `¥${getPriceValue(phone.price).toLocaleString()}` : '价格未知';
+    const priceDisplay = formatPriceDisplay(phone);
     
     return `
         <div class="phone-card ${isSelected ? 'selected' : ''}" data-phone-id="${phone.id}">
@@ -362,7 +446,7 @@ function createPhoneCard(phone) {
                 </div>
             </div>
             
-            <div class="phone-price">${price}</div>
+            <div class="phone-price">${priceDisplay}</div>
             
             ${phone.features && phone.features.length > 0 ? `
                 <div class="phone-features">
@@ -382,6 +466,9 @@ function createPhoneCard(phone) {
                 <button class="btn btn-info btn-small" onclick="togglePhoneSelection('${phone.id}')">
                     <i class="fas ${isSelected ? 'fa-minus' : 'fa-plus'}"></i> 
                     ${isSelected ? '取消选择' : '加入对比'}
+                </button>
+                <button class="btn btn-warning btn-small" onclick="editPhone('${phone.id}')">
+                    <i class="fas fa-edit"></i> 编辑
                 </button>
             </div>
         </div>
@@ -686,8 +773,8 @@ function createCompareTable(phones) {
     // 价格和发布时间
     table += `
         <tr>
-            <td><strong>起售价</strong></td>
-            ${phones.map(phone => `<td>${getPriceValue(phone.price) > 0 ? `¥${getPriceValue(phone.price).toLocaleString()}` : '未知'}</td>`).join('')}
+            <td><strong>价格</strong></td>
+            ${phones.map(phone => `<td>${formatPriceDisplay(phone)}</td>`).join('')}
         </tr>
         <tr>
             <td><strong>发布时间</strong></td>
@@ -780,7 +867,7 @@ function viewPhoneDetails(phoneId) {
             
             <div class="detail-section">
                 <h4>价格</h4>
-                <p><strong>起售价：</strong>${getPriceValue(phone.price) > 0 ? `¥${getPriceValue(phone.price).toLocaleString()}` : '未知'}</p>
+                <div class="price-detail">${formatPriceDisplay(phone)}</div>
             </div>
             
             ${phone.features && phone.features.length > 0 ? `
@@ -788,6 +875,30 @@ function viewPhoneDetails(phoneId) {
                     <h4>特色功能</h4>
                     <div class="feature-tags">
                         ${phone.features.map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
+                    </div>
+                </div>
+            ` : ''}
+            
+            ${phone.purchase_links && Object.keys(phone.purchase_links).length > 0 ? `
+                <div class="detail-section">
+                    <h4>购买链接</h4>
+                    <div class="purchase-links">
+                        ${Object.entries(phone.purchase_links).map(([platform, url]) => 
+                            `<a href="${url}" target="_blank" class="purchase-link">
+                                <i class="fas fa-external-link-alt"></i> ${platform}
+                            </a>`
+                        ).join('')}
+                    </div>
+                </div>
+            ` : ''}
+            
+            ${phone.detail_images && phone.detail_images.length > 0 ? `
+                <div class="detail-section">
+                    <h4>产品图片</h4>
+                    <div class="detail-images">
+                        ${phone.detail_images.map((img, index) => 
+                            `<img src="${img}" alt="${phone.model} 图片 ${index + 1}" class="detail-image" onclick="openImageModal('${img}', '${phone.model}')">`
+                        ).join('')}
                     </div>
                 </div>
             ` : ''}
@@ -819,6 +930,35 @@ function viewPhoneDetails(phoneId) {
     document.body.appendChild(modal);
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
+}
+
+// 打开图片模态框
+function openImageModal(imageSrc, phoneModel) {
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content image-modal">
+            <div class="modal-header">
+                <h2>${phoneModel} - 产品图片</h2>
+                <span class="close" onclick="this.closest('.modal').remove(); document.body.style.overflow = 'auto';">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="${imageSrc}" alt="${phoneModel}" class="full-size-image">
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    
+    // 点击背景关闭
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.remove();
+            document.body.style.overflow = 'auto';
+        }
+    });
 }
 
 // 导出数据
@@ -892,6 +1032,211 @@ function handleImportData(event) {
     event.target.value = '';
 }
 
+// 编辑手机
+function editPhone(phoneId) {
+    const phone = allPhones.find(p => p.id === phoneId);
+    if (!phone) {
+        showToast('未找到该手机型号', 'error');
+        return;
+    }
+    
+    showEditPhoneModal(phone);
+}
+
+// 显示编辑手机模态框
+function showEditPhoneModal(phone) {
+    const form = elements.editPhoneForm;
+    
+    // 填充表单数据
+    form.brand.value = phone.brand || '';
+    form.model.value = phone.model || '';
+    form.series.value = phone.series || '';
+    form.category.value = phone.category || '';
+    
+    // 处理器信息
+    form.processor_brand.value = phone.processor?.brand || '';
+    form.processor_model.value = phone.processor?.model || '';
+    
+    // 内存存储
+    form.memory_ram.value = phone.memory?.ram || '';
+    form.memory_storage.value = Array.isArray(phone.memory?.storage) 
+        ? phone.memory.storage.join(',') 
+        : (phone.memory?.storage || '');
+    
+    // 屏幕信息
+    form.display_size.value = phone.display?.size || '';
+    form.display_resolution.value = phone.display?.resolution || '';
+    form.display_refresh_rate.value = phone.display?.refresh_rate || '';
+    
+    // 摄像头信息
+    if (phone.camera?.rear && typeof phone.camera.rear === 'object') {
+        form.camera_main.value = phone.camera.rear.main || '';
+        form.camera_ultra_wide.value = phone.camera.rear.ultra_wide || '';
+        form.camera_telephoto.value = phone.camera.rear.telephoto || '';
+    }
+    
+    // 电池信息
+    form.battery_capacity.value = phone.battery?.capacity || '';
+    form.battery_wired.value = phone.battery?.charging?.wired || '';
+    form.battery_wireless.value = phone.battery?.charging?.wireless || '';
+    
+    // 价格信息
+    if (phone.price?.start_price) {
+        if (typeof phone.price.start_price === 'object') {
+            form.price_starting_price.value = phone.price.start_price.starting_price || '';
+        } else {
+            form.price_starting_price.value = phone.price.start_price || '';
+        }
+    }
+    form.price_currency.value = phone.price?.currency || 'CNY';
+    
+    // 特色功能
+    form.features.value = phone.features?.join('\n') || '';
+    
+    // 购买链接
+    form.purchase_links.value = phone.purchase_links ? 
+        Object.entries(phone.purchase_links).map(([platform, url]) => `${platform}:${url}`).join('\n') : '';
+    
+    // 详情图片
+    form.detail_images.value = phone.detail_images ? phone.detail_images.join('\n') : '';
+    
+    // 存储当前编辑的手机ID
+    form.dataset.editingPhoneId = phone.id;
+    
+    elements.editPhoneModal.style.display = 'block';
+}
+
+// 隐藏编辑手机模态框
+function hideEditPhoneModal() {
+    elements.editPhoneModal.style.display = 'none';
+    elements.editPhoneForm.reset();
+    delete elements.editPhoneForm.dataset.editingPhoneId;
+}
+
+// 处理编辑手机表单提交
+function handleEditPhone(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const phoneId = form.dataset.editingPhoneId;
+    
+    if (!phoneId) {
+        showToast('编辑失败：未找到要编辑的手机', 'error');
+        return;
+    }
+    
+    // 查找要编辑的手机
+    const phoneIndex = allPhones.findIndex(p => p.id === phoneId);
+    if (phoneIndex === -1) {
+        showToast('编辑失败：未找到该手机', 'error');
+        return;
+    }
+    
+    try {
+        // 解析特色功能
+        const features = form.features.value
+            .split('\n')
+            .map(f => f.trim())
+            .filter(f => f.length > 0);
+        
+        // 解析存储配置
+        const storageStr = form.memory_storage.value.trim();
+        const storage = storageStr ? storageStr.split(',').map(s => s.trim()) : [];
+        
+        // 解析购买链接
+        const purchaseLinks = {};
+        if (form.purchase_links.value.trim()) {
+            form.purchase_links.value.split('\n').forEach(line => {
+                const [platform, url] = line.split(':').map(s => s.trim());
+                if (platform && url) {
+                    purchaseLinks[platform] = url;
+                }
+            });
+        }
+        
+        // 解析详情图片
+        const detailImages = form.detail_images.value
+            .split('\n')
+            .map(img => img.trim())
+            .filter(img => img.length > 0);
+        
+        // 构建更新后的手机数据
+        const updatedPhone = {
+            ...allPhones[phoneIndex],
+            brand: form.brand.value,
+            model: form.model.value,
+            series: form.series.value,
+            category: form.category.value,
+            processor: {
+                brand: form.processor_brand.value,
+                model: form.processor_model.value,
+                process: allPhones[phoneIndex].processor?.process || '',
+                gpu: allPhones[phoneIndex].processor?.gpu || ''
+            },
+            memory: {
+                ram: form.memory_ram.value,
+                storage: storage.length > 0 ? storage : form.memory_storage.value
+            },
+            display: {
+                size: form.display_size.value,
+                resolution: form.display_resolution.value,
+                refresh_rate: form.display_refresh_rate.value,
+                type: allPhones[phoneIndex].display?.type || ''
+            },
+            camera: {
+                rear: {
+                    main: form.camera_main.value,
+                    ultra_wide: form.camera_ultra_wide.value,
+                    telephoto: form.camera_telephoto.value,
+                    special: allPhones[phoneIndex].camera?.rear?.special || ''
+                },
+                front: allPhones[phoneIndex].camera?.front || ''
+            },
+            battery: {
+                capacity: form.battery_capacity.value,
+                charging: {
+                    wired: form.battery_wired.value,
+                    wireless: form.battery_wireless.value
+                }
+            },
+            price: {
+                start_price: {
+                    starting_price: parseInt(form.price_starting_price.value) || 0,
+                    currency: form.price_currency.value
+                },
+                currency: form.price_currency.value
+            },
+            features: features,
+            purchase_links: purchaseLinks,
+            detail_images: detailImages,
+            connectivity: allPhones[phoneIndex].connectivity || {},
+            design: allPhones[phoneIndex].design || {},
+            os: allPhones[phoneIndex].os || {}
+        };
+        
+        // 更新数据
+        allPhones[phoneIndex] = updatedPhone;
+        
+        // 如果是用户添加的手机，也更新localStorage中的数据
+        const userPhoneIndex = userAddedPhones.findIndex(p => p.id === phoneId);
+        if (userPhoneIndex !== -1) {
+            userAddedPhones[userPhoneIndex] = updatedPhone;
+            saveUserAddedPhones();
+        }
+        
+        // 重新显示手机列表
+        displayPhones(filteredPhones);
+        updateStats();
+        
+        hideEditPhoneModal();
+        showToast(`${updatedPhone.model} 编辑成功！`, 'success');
+        
+    } catch (error) {
+        console.error('编辑手机失败:', error);
+        showToast('编辑失败，请重试', 'error');
+    }
+}
+
 // 显示提示消息
 function showToast(message, type = 'success') {
     elements.toast.textContent = message;
@@ -960,6 +1305,94 @@ style.textContent = `
     
     .detail-section p {
         margin-bottom: 0.5rem;
+    }
+    
+    .price-variant {
+        margin: 0.3rem 0;
+        padding: 0.2rem 0;
+        font-size: 0.9rem;
+        color: #2c5aa0;
+        font-weight: 500;
+    }
+    
+    .phone-price .price-variant {
+        font-size: 0.85rem;
+        line-height: 1.2;
+    }
+    
+    .price-detail {
+        line-height: 1.4;
+    }
+    
+    .price-detail .price-variant {
+        margin: 0.5rem 0;
+        padding: 0.3rem 0.5rem;
+        background: #e3f2fd;
+        border-radius: 4px;
+        font-size: 0.95rem;
+    }
+    
+    .purchase-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .purchase-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0.5rem 1rem;
+        background: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        transition: background-color 0.3s;
+    }
+    
+    .purchase-link:hover {
+        background: #218838;
+        color: white;
+    }
+    
+    .detail-images {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .detail-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        border: 2px solid #e9ecef;
+    }
+    
+    .detail-image:hover {
+        transform: scale(1.05);
+        border-color: #667eea;
+    }
+    
+    .image-modal .modal-content {
+        max-width: 90vw;
+        max-height: 90vh;
+        padding: 0;
+    }
+    
+    .image-modal .modal-body {
+        padding: 0;
+        text-align: center;
+    }
+    
+    .full-size-image {
+        max-width: 100%;
+        max-height: 80vh;
+        object-fit: contain;
     }
 `;
 document.head.appendChild(style);

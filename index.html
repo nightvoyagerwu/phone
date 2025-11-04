@@ -274,6 +274,154 @@
         </div>
     </div>
 
+    <!-- 编辑模态框 -->
+    <div id="editPhoneModal" class="modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2>编辑机型</h2>
+                <span class="close" id="closeEditModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="editPhoneForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>品牌 *</label>
+                            <select name="brand" required>
+                                <option value="">请选择品牌</option>
+                                <option value="华为">华为</option>
+                                <option value="荣耀">荣耀</option>
+                                <option value="小米">小米</option>
+                                <option value="OPPO">OPPO</option>
+                                <option value="vivo">vivo</option>
+                                <option value="iQOO">iQOO</option>
+                                <option value="一加">一加</option>
+                                <option value="realme">realme</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>型号 *</label>
+                            <input type="text" name="model" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>系列</label>
+                            <input type="text" name="series">
+                        </div>
+
+                        <div class="form-group">
+                            <label>类型</label>
+                            <select name="category">
+                                <option value="高端旗舰">高端旗舰</option>
+                                <option value="中端">中端</option>
+                                <option value="入门">入门</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>处理器品牌</label>
+                            <input type="text" name="processor_brand">
+                        </div>
+
+                        <div class="form-group">
+                            <label>处理器型号</label>
+                            <input type="text" name="processor_model">
+                        </div>
+
+                        <div class="form-group">
+                            <label>内存</label>
+                            <input type="text" name="memory_ram" placeholder="例如：12GB">
+                        </div>
+
+                        <div class="form-group">
+                            <label>存储</label>
+                            <input type="text" name="memory_storage" placeholder="例如：256GB 或 256GB,512GB,1TB">
+                        </div>
+
+                        <div class="form-group">
+                            <label>屏幕尺寸</label>
+                            <input type="text" name="display_size" placeholder="例如：6.7英寸">
+                        </div>
+
+                        <div class="form-group">
+                            <label>屏幕分辨率</label>
+                            <input type="text" name="display_resolution" placeholder="例如：2688×1216">
+                        </div>
+
+                        <div class="form-group">
+                            <label>屏幕刷新率</label>
+                            <input type="text" name="display_refresh_rate" placeholder="例如：120Hz">
+                        </div>
+
+                        <div class="form-group">
+                            <label>主摄像头</label>
+                            <input type="text" name="camera_main" placeholder="例如：50MP主摄">
+                        </div>
+
+                        <div class="form-group">
+                            <label>超广角摄像头</label>
+                            <input type="text" name="camera_ultra_wide" placeholder="例如：40MP超广角">
+                        </div>
+
+                        <div class="form-group">
+                            <label>长焦摄像头</label>
+                            <input type="text" name="camera_telephoto" placeholder="例如：12MP长焦">
+                        </div>
+
+                        <div class="form-group">
+                            <label>电池容量</label>
+                            <input type="text" name="battery_capacity" placeholder="例如：5300mAh">
+                        </div>
+
+                        <div class="form-group">
+                            <label>有线充电功率</label>
+                            <input type="text" name="battery_wired" placeholder="例如：66W">
+                        </div>
+
+                        <div class="form-group">
+                            <label>无线充电功率</label>
+                            <input type="text" name="battery_wireless" placeholder="例如：50W">
+                        </div>
+
+                        <div class="form-group">
+                            <label>起售价</label>
+                            <input type="number" name="price_starting_price" placeholder="例如：5499">
+                        </div>
+
+                        <div class="form-group">
+                            <label>货币</label>
+                            <select name="price_currency">
+                                <option value="CNY">人民币</option>
+                                <option value="USD">美元</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>特色功能</label>
+                            <textarea name="features" rows="3" placeholder="每行一个特色功能"></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>购买链接</label>
+                            <textarea name="purchase_links" rows="3" placeholder="格式：平台名:链接，每行一个"></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>详情图片</label>
+                            <textarea name="detail_images" rows="3" placeholder="每行一个图片URL"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelEditBtn">取消</button>
+                        <button type="submit" class="btn btn-primary">保存修改</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- 提示消息 -->
     <div id="toast" class="toast"></div>
 
