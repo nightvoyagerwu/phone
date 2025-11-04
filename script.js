@@ -178,7 +178,8 @@ function applyFilters() {
         const matchesBrand = !brandFilter || phone.brand === brandFilter;
         
         // 价位筛选
-        const matchesPrice = !priceFilter || checkPriceRange(phone.price.start_price, priceFilter);
+        const priceValue = getPriceValue(phone.price);
+        const matchesPrice = !priceFilter || checkPriceRange(priceValue, priceFilter);
         
         // 类型筛选
         const matchesCategory = !categoryFilter || phone.category === categoryFilter;
@@ -188,6 +189,92 @@ function applyFilters() {
     
     displayPhones(filteredPhones);
     updateStats();
+}
+
+// 获取价格值（处理嵌套结构）
+function getPriceValue(priceObj) {
+    if (!priceObj) return 0;
+    
+    // 如果是嵌套结构
+    if (priceObj.start_price && typeof priceObj.start_price === 'object') {
+        return priceObj.start_price.starting_price || 0;
+    }
+    
+    // 如果是直接数字
+    if (typeof priceObj.start_price === 'number') {
+        return priceObj.start_price;
+    }
+    
+    return 0;
+}
+
+// 获取充电信息（处理嵌套结构）
+function getChargingInfo(chargingObj) {
+    if (!chargingObj) return '未知';
+    
+    // 如果是对象结构
+    if (typeof chargingObj === 'object') {
+        const wired = chargingObj.wired || '';
+        const wireless = chargingObj.wireless || '';
+        
+        if (wired && wireless) {
+            return `${wired} (有线) / ${wireless} (无线)`;
+        } else if (wired) {
+            return `${wired} (有线)`;
+        } else if (wireless) {
+            return `${wireless} (无线)`;
+        }
+    }
+    
+    // 如果是字符串
+    if (typeof chargingObj === 'string') {
+        return chargingObj;
+    }
+    
+    return '未知';
+}
+
+// 获取存储信息（处理数组结构）
+function getStorageInfo(storageObj) {
+    if (!storageObj) return '未知';
+    
+    // 如果是数组
+    if (Array.isArray(storageObj)) {
+        return storageObj.join(', ');
+    }
+    
+    // 如果是字符串
+    if (typeof storageObj === 'string') {
+        return storageObj;
+    }
+    
+    return '未知';
+}
+
+// 获取后置摄像头信息（处理嵌套结构）
+function getRearCameraInfo(cameraObj) {
+    if (!cameraObj) return '未知';
+    
+    // 如果是对象结构
+    if (typeof cameraObj === 'object' && !Array.isArray(cameraObj)) {
+        const main = cameraObj.main || '';
+        const ultra_wide = cameraObj.ultra_wide || '';
+        const telephoto = cameraObj.telephoto || '';
+        
+        const parts = [];
+        if (main) parts.push(main);
+        if (ultra_wide) parts.push(ultra_wide);
+        if (telephoto) parts.push(telephoto);
+        
+        return parts.length > 0 ? parts.join(', ') : '未知';
+    }
+    
+    // 如果是字符串
+    if (typeof cameraObj === 'string') {
+        return cameraObj;
+    }
+    
+    return '未知';
 }
 
 // 检查价格范围
@@ -243,7 +330,7 @@ function displayPhones(phones) {
 // 创建手机卡片
 function createPhoneCard(phone) {
     const isSelected = selectedPhones.some(selected => selected.id === phone.id);
-    const price = phone.price.start_price ? `¥${phone.price.start_price.toLocaleString()}` : '价格未知';
+    const price = getPriceValue(phone.price) > 0 ? `¥${getPriceValue(phone.price).toLocaleString()}` : '价格未知';
     
     return `
         <div class="phone-card ${isSelected ? 'selected' : ''}" data-phone-id="${phone.id}">
@@ -271,7 +358,7 @@ function createPhoneCard(phone) {
                 </div>
                 <div class="spec-item">
                     <i class="fas fa-camera"></i>
-                    <span>${phone.camera.rear || '未知'}</span>
+                    <span>${getRearCameraInfo(phone.camera.rear)}</span>
                 </div>
             </div>
             
@@ -552,7 +639,7 @@ function createCompareTable(phones) {
         </tr>
         <tr>
             <td><strong>存储</strong></td>
-            ${phones.map(phone => `<td>${phone.memory.storage || '未知'}</td>`).join('')}
+            ${phones.map(phone => `<td>${getStorageInfo(phone.memory.storage)}</td>`).join('')}
         </tr>
     `;
     
@@ -576,7 +663,7 @@ function createCompareTable(phones) {
     table += `
         <tr>
             <td><strong>后置摄像头</strong></td>
-            ${phones.map(phone => `<td>${phone.camera.rear || '未知'}</td>`).join('')}
+            ${phones.map(phone => `<td>${getRearCameraInfo(phone.camera.rear)}</td>`).join('')}
         </tr>
         <tr>
             <td><strong>前置摄像头</strong></td>
@@ -592,7 +679,7 @@ function createCompareTable(phones) {
         </tr>
         <tr>
             <td><strong>充电功率</strong></td>
-            ${phones.map(phone => `<td>${phone.battery.charging || '未知'}</td>`).join('')}
+            ${phones.map(phone => `<td>${getChargingInfo(phone.battery.charging)}</td>`).join('')}
         </tr>
     `;
     
@@ -600,7 +687,7 @@ function createCompareTable(phones) {
     table += `
         <tr>
             <td><strong>起售价</strong></td>
-            ${phones.map(phone => `<td>${phone.price.start_price ? `¥${phone.price.start_price.toLocaleString()}` : '未知'}</td>`).join('')}
+            ${phones.map(phone => `<td>${getPriceValue(phone.price) > 0 ? `¥${getPriceValue(phone.price).toLocaleString()}` : '未知'}</td>`).join('')}
         </tr>
         <tr>
             <td><strong>发布时间</strong></td>
@@ -669,7 +756,7 @@ function viewPhoneDetails(phoneId) {
             <div class="detail-section">
                 <h4>内存存储</h4>
                 <p><strong>内存：</strong>${phone.memory.ram || '未知'}</p>
-                <p><strong>存储：</strong>${phone.memory.storage || '未知'}</p>
+                <p><strong>存储：</strong>${getStorageInfo(phone.memory.storage)}</p>
             </div>
             
             <div class="detail-section">
@@ -681,19 +768,19 @@ function viewPhoneDetails(phoneId) {
             
             <div class="detail-section">
                 <h4>摄像头</h4>
-                <p><strong>后置：</strong>${phone.camera.rear || '未知'}</p>
+                <p><strong>后置：</strong>${getRearCameraInfo(phone.camera.rear)}</p>
                 <p><strong>前置：</strong>${phone.camera.front || '未知'}</p>
             </div>
             
             <div class="detail-section">
                 <h4>电池</h4>
                 <p><strong>容量：</strong>${phone.battery.capacity || '未知'}</p>
-                <p><strong>充电：</strong>${phone.battery.charging || '未知'}</p>
+                <p><strong>充电：</strong>${getChargingInfo(phone.battery.charging)}</p>
             </div>
             
             <div class="detail-section">
                 <h4>价格</h4>
-                <p><strong>起售价：</strong>${phone.price.start_price ? `¥${phone.price.start_price.toLocaleString()}` : '未知'}</p>
+                <p><strong>起售价：</strong>${getPriceValue(phone.price) > 0 ? `¥${getPriceValue(phone.price).toLocaleString()}` : '未知'}</p>
             </div>
             
             ${phone.features && phone.features.length > 0 ? `
