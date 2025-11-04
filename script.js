@@ -5,6 +5,8 @@ let allPhones = [];
 let filteredPhones = [];
 let selectedPhones = [];
 let userAddedPhones = [];
+let originalPhones = []; // 存储原始数据用于比较
+let dataModified = false; // 标记数据是否被修改
 
 // DOM元素
 const elements = {
@@ -17,6 +19,7 @@ const elements = {
     addPhoneBtn: document.getElementById('addPhoneBtn'),
     exportDataBtn: document.getElementById('exportDataBtn'),
     importDataBtn: document.getElementById('importDataBtn'),
+    resetDataBtn: document.getElementById('resetDataBtn'),
     importFileInput: document.getElementById('importFileInput'),
     phoneList: document.getElementById('phoneList'),
     loading: document.getElementById('loading'),
@@ -51,6 +54,12 @@ async function initializeApp() {
         // 加载主数据文件
         await loadPhoneData();
         
+        // 保存原始数据副本
+        originalPhones = JSON.parse(JSON.stringify(allPhones));
+        
+        // 检查是否有保存的修改数据
+        loadModifiedData();
+        
         // 绑定事件监听器
         bindEventListeners();
         
@@ -61,7 +70,11 @@ async function initializeApp() {
         // 隐藏加载状态
         elements.loading.style.display = 'none';
         
-        showToast('数据加载完成！', 'success');
+        if (dataModified) {
+            showToast('已恢复上次修改的数据！', 'info');
+        } else {
+            showToast('数据加载完成！', 'success');
+        }
     } catch (error) {
         console.error('初始化应用失败:', error);
         showToast('数据加载失败，请刷新页面重试', 'error');
@@ -90,6 +103,49 @@ async function loadPhoneData() {
     }
 }
 
+// 加载保存的修改数据
+function loadModifiedData() {
+    const modifiedData = localStorage.getItem('modifiedPhones');
+    if (modifiedData) {
+        try {
+            const parsed = JSON.parse(modifiedData);
+            if (parsed.phones && Array.isArray(parsed.phones)) {
+                // 替换当前数据
+                allPhones = parsed.phones;
+                filteredPhones = [...allPhones];
+                dataModified = true;
+                console.log(`恢复了 ${parsed.phones.length} 款修改的手机数据`);
+            }
+        } catch (error) {
+            console.error('加载修改数据失败:', error);
+        }
+    }
+}
+
+// 保存修改数据
+function saveModifiedData() {
+    try {
+        const dataToSave = {
+            phones: allPhones,
+            lastModified: new Date().toISOString(),
+            version: '2.1'
+        };
+        localStorage.setItem('modifiedPhones', JSON.stringify(dataToSave));
+        console.log('修改数据已自动保存');
+    } catch (error) {
+        console.error('保存修改数据失败:', error);
+    }
+}
+
+// 标记数据被修改
+function markDataModified() {
+    dataModified = true;
+    // 延迟保存，避免频繁保存
+    setTimeout(() => {
+        saveModifiedData();
+    }, 1000);
+}
+
 // 加载用户添加的手机数据
 function loadUserAddedPhones() {
     const stored = localStorage.getItem('userAddedPhones');
@@ -115,6 +171,15 @@ function bindEventListeners() {
     elements.searchInput.addEventListener('input', function() {
         console.log('搜索输入:', this.value);
         debounce(applyFilters, 300)();
+    });
+    
+    // 搜索框回车键
+    elements.searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            console.log('回车键触发搜索:', this.value);
+            applyFilters();
+        }
     });
     
     // 筛选器
@@ -145,6 +210,7 @@ function bindEventListeners() {
     // 数据导入导出
     elements.exportDataBtn.addEventListener('click', exportData);
     elements.importDataBtn.addEventListener('click', () => elements.importFileInput.click());
+    elements.resetDataBtn.addEventListener('click', resetData);
     elements.importFileInput.addEventListener('change', handleImportData);
     
     // 点击模态框外部关闭
@@ -322,21 +388,19 @@ function formatPriceDisplay(phone) {
     
     let priceDisplay = '';
     
+    // 总是显示起售价（如果有）
+    if (basePrice > 0) {
+        priceDisplay += `<div class="price-base">起售价 ¥${basePrice.toLocaleString()}</div>`;
+    }
+    
+    // 如果有详细价格配置，显示所有配置价格
     if (detailedPrices && detailedPrices.length > 0) {
-        // 显示详细价格配置
         const priceList = detailedPrices.map(variant => 
             `<div class="price-variant">${variant.config} ${variant.price}</div>`
         ).join('');
-        
-        // 如果有起售价，添加到顶部
-        if (basePrice > 0) {
-            priceDisplay += `<div class="price-base">起售价 ¥${basePrice.toLocaleString()}</div>`;
-        }
         priceDisplay += priceList;
-    } else if (basePrice > 0) {
-        // 显示起售价
-        priceDisplay = `起售价 ¥${basePrice.toLocaleString()}`;
-    } else {
+    } else if (basePrice === 0) {
+        // 如果没有起售价也没有详细价格，显示价格未知
         priceDisplay = '价格未知';
     }
     
@@ -690,7 +754,10 @@ function handleAddPhone(event) {
     // 关闭模态框
     hideAddPhoneModal();
     
-    showToast(`已成功添加 ${phoneData.model}`, 'success');
+    showToast(`已成功添加 ${phoneData.model}！数据已自动保存。`, 'success');
+    
+    // 自动保存数据
+    markDataModified();
 }
 
 // 显示对比模态框
@@ -1016,12 +1083,13 @@ function openImageModal(imageSrc, phoneModel) {
 function exportData() {
     const exportData = {
         metadata: {
-            export_time: new Date().toISOString(),
-            total_phones: allPhones.length,
-            user_added: userAddedPhones.length
+            title: "2024-2025年主流手机厂商机型数据库",
+            description: "华为、荣耀、小米、OPPO、vivo、iQOO、一加、realme等厂商2024-2025年发布的手机机型详细参数",
+            update_time: new Date().toISOString().split('T')[0],
+            total_models: allPhones.length,
+            brands: [...new Set(allPhones.map(p => p.brand))].filter(b => b)
         },
-        phones: allPhones,
-        userAddedPhones: userAddedPhones
+        phones: allPhones
     };
     
     const dataStr = JSON.stringify(exportData, null, 2);
@@ -1029,10 +1097,34 @@ function exportData() {
     
     const link = document.createElement('a');
     link.href = URL.createObjectURL(dataBlob);
-    link.download = `手机对比数据_${new Date().toISOString().split('T')[0]}.json`;
+    link.download = `all_phones_unified_${new Date().toISOString().split('T')[0]}.json`;
     link.click();
     
-    showToast('数据导出成功', 'success');
+    showToast('数据导出成功！修改已自动保存到本地，导出文件仅作备份', 'success');
+}
+
+// 重置数据到原始状态
+function resetData() {
+    if (confirm('确定要重置所有修改吗？这将恢复到原始数据状态。')) {
+        // 清除保存的修改数据
+        localStorage.removeItem('modifiedPhones');
+        
+        // 重新加载原始数据
+        loadPhoneData().then(() => {
+            originalPhones = JSON.parse(JSON.stringify(allPhones));
+            dataModified = false;
+            
+            // 重新显示
+            displayPhones(allPhones);
+            updateStats();
+            
+            showToast('数据已重置到原始状态', 'success');
+        }).catch(error => {
+            console.error('重置数据失败:', error);
+            showToast('重置数据失败，请刷新页面重试', 'error');
+        });
+    }
+}
 }
 
 // 处理数据导入
@@ -1135,6 +1227,15 @@ function showEditPhoneModal(phone) {
     if (phone.price?.start_price) {
         if (typeof phone.price.start_price === 'object') {
             form.price_starting_price.value = phone.price.start_price.starting_price || '';
+            
+            // 提取价格配置（除了starting_price和currency外的其他配置）
+            const priceConfigs = [];
+            Object.entries(phone.price.start_price).forEach(([key, value]) => {
+                if (key !== 'starting_price' && key !== 'currency' && typeof value === 'string') {
+                    priceConfigs.push(`${key}:${value}`);
+                }
+            });
+            form.price_configs.value = priceConfigs.join('\n');
         } else {
             form.price_starting_price.value = phone.price.start_price || '';
         }
@@ -1211,6 +1312,31 @@ function handleEditPhone(event) {
             .map(img => img.trim())
             .filter(img => img.length > 0);
         
+        // 解析价格配置
+        const priceConfigs = {};
+        if (form.price_configs.value.trim()) {
+            form.price_configs.value.split('\n').forEach(line => {
+                const [config, price] = line.split(':').map(s => s.trim());
+                if (config && price) {
+                    priceConfigs[config] = price;
+                }
+            });
+        }
+        
+        // 构建价格对象
+        const priceObj = {
+            start_price: {
+                starting_price: parseInt(form.price_starting_price.value) || 0,
+                currency: form.price_currency.value
+            },
+            currency: form.price_currency.value
+        };
+        
+        // 如果有价格配置，添加到start_price中
+        if (Object.keys(priceConfigs).length > 0) {
+            Object.assign(priceObj.start_price, priceConfigs);
+        }
+        
         // 构建更新后的手机数据
         const updatedPhone = {
             ...allPhones[phoneIndex],
@@ -1250,13 +1376,7 @@ function handleEditPhone(event) {
                     wireless: form.battery_wireless.value
                 }
             },
-            price: {
-                start_price: {
-                    starting_price: parseInt(form.price_starting_price.value) || 0,
-                    currency: form.price_currency.value
-                },
-                currency: form.price_currency.value
-            },
+            price: priceObj,
             features: features,
             purchase_links: purchaseLinks,
             detail_images: detailImages,
@@ -1280,7 +1400,15 @@ function handleEditPhone(event) {
         updateStats();
         
         hideEditPhoneModal();
-        showToast(`${updatedPhone.model} 编辑成功！`, 'success');
+        showToast(`${updatedPhone.model} 编辑成功！数据已自动保存。`, 'success');
+        
+        // 自动保存数据
+        markDataModified();
+        
+        // 提示数据已保存
+        setTimeout(() => {
+            showToast('修改已自动保存到本地，刷新页面后仍会保留', 'info');
+        }, 2000);
         
     } catch (error) {
         console.error('编辑手机失败:', error);
