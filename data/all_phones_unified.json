@@ -1,0 +1,5402 @@
+{
+  "metadata": {
+    "title": "2024-2025年主流手机厂商机型数据库",
+    "description": "华为、荣耀、小米、OPPO、vivo、iQOO、一加、realme等厂商2024-2025年发布的手机机型详细参数",
+    "update_time": "2025-11-04",
+    "total_models": 92,
+    "brands": [
+      "华为",
+      "荣耀",
+      "小米",
+      "OPPO",
+      "vivo",
+      "iQOO",
+      "一加",
+      "realme"
+    ]
+  },
+  "phones": [
+    {
+      "id": "华为_Mate 70 标准版_1762254257212",
+      "brand": "华为",
+      "model": "Mate 70 标准版",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟9000S1",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "12GB",
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.7英寸",
+        "resolution": "2688×1216",
+        "refresh_rate": "LTPO 1-120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(F1.4-F4.0,OIS)",
+          "ultra_wide": "40MP超广角(F2.2)",
+          "telephoto": "12MP潜望长焦(F3.4,OIS)",
+          "special": "红枫原色镜头",
+          "zoom": "5.5倍光变/50倍数字"
+        },
+        "front": "13MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5300mAh",
+        "charging": {
+          "wired": "66W",
+          "wireless": "50W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 5499,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-11-26",
+      "features": [
+        "红枫原色镜头",
+        "LTPO屏幕",
+        "卫星通信"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_Mate 70 Pro_1762254257212",
+      "brand": "华为",
+      "model": "Mate 70 Pro",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟9020",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "12GB/16GB",
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.9英寸",
+        "resolution": "2832×1316",
+        "refresh_rate": "LTPO 1-120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(F1.4-F4.0,OIS)",
+          "ultra_wide": "40MP超广角(F2.2)",
+          "telephoto": "48MP长焦(F2.1,OIS)",
+          "special": "红枫原色镜头",
+          "zoom": "4倍光变/100倍数字"
+        },
+        "front": "13MP+3D深感",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "100W",
+          "wireless": "80W",
+          "reverse_wired": "18W",
+          "reverse_wireless": "20W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 6499,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-11-26",
+      "features": [
+        "红枫原色镜头",
+        "IP68/69防护",
+        "100W快充",
+        "天通卫星通信"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_Mate 70 Pro+_1762254257212",
+      "brand": "华为",
+      "model": "Mate 70 Pro+",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟9020",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "16GB",
+        "storage": [
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.9英寸",
+        "resolution": "2832×1316",
+        "refresh_rate": "LTPO 1-120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(F1.4-F4.0,OIS,RYYB)",
+          "ultra_wide": "40MP超广角(F2.2,RYYB)",
+          "telephoto": "48MP长焦(F2.1,OIS,RYYB)",
+          "special": "红枫原色镜头",
+          "zoom": "4倍光变/100倍数字"
+        },
+        "front": "13MP+3D深感",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5700mAh",
+        "charging": {
+          "wired": "100W",
+          "wireless": "80W",
+          "reverse_wired": "18W",
+          "reverse_wireless": "20W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 8499,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-11-26",
+      "features": [
+        "RYYB传感器",
+        "天通卫星通信",
+        "钛金属中框",
+        "第二代灵犀通信"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_Mate 70 RS 非凡大师_1762254257212",
+      "brand": "华为",
+      "model": "Mate 70 RS 非凡大师",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟9020",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "16GB",
+        "storage": [
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.9英寸",
+        "resolution": "2832×1316",
+        "refresh_rate": "LTPO 1-120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(F1.4-F4.0,OIS,RYYB)",
+          "ultra_wide": "40MP超广角(F2.2,RYYB)",
+          "telephoto": "48MP长焦(F2.1,OIS,RYYB)",
+          "special": "红枫原色镜头",
+          "zoom": "4倍光变/100倍数字"
+        },
+        "front": "13MP+3D深感",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5700mAh",
+        "charging": {
+          "wired": "100W",
+          "wireless": "80W",
+          "reverse_wired": "18W",
+          "reverse_wireless": "20W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 11999,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-11-26",
+      "features": [
+        "双层OLED屏幕",
+        "传奇星钻+陶瓷设计",
+        "3500nits峰值亮度",
+        "超高端商务定位"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_Pura 70 标准版_1762254257212",
+      "brand": "华为",
+      "model": "Pura 70 标准版",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟9000S1",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "12GB",
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.6英寸",
+        "resolution": "2760×1256",
+        "refresh_rate": "LTPO 1-120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(F1.4-F4.0,OIS)",
+          "ultra_wide": "13MP超广角(F2.2)",
+          "telephoto": "12MP潜望长焦(F3.4,OIS)",
+          "zoom": "5倍光变/50倍数字"
+        },
+        "front": "13MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "4900mAh",
+        "charging": {
+          "wired": "66W",
+          "wireless": "50W",
+          "reverse": "7.5W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 5499,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-04-18",
+      "features": [
+        "潜望长焦",
+        "可变光圈",
+        "轻薄设计"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_Pura 70 Pro_1762254257212",
+      "brand": "华为",
+      "model": "Pura 70 Pro",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟9010",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "12GB",
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.8英寸",
+        "resolution": "2844×1260",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(F1.4-F4.0,OIS)",
+          "ultra_wide": "12.5MP超广角(F2.2)",
+          "telephoto": "48MP长焦(F2.1,OIS)",
+          "zoom": "3.5倍光变/100倍数字"
+        },
+        "front": "13MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5050mAh",
+        "charging": {
+          "wired": "100W",
+          "wireless": "80W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 6499,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-04-18",
+      "features": [
+        "北斗卫星图片消息",
+        "100W快充",
+        "潜望长焦"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_Pura 70 Pro+_1762254257212",
+      "brand": "华为",
+      "model": "Pura 70 Pro+",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟9010",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "16GB",
+        "storage": [
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.8英寸",
+        "resolution": "2844×1260",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(F1.4-F4.0,OIS)",
+          "ultra_wide": "12.5MP超广角(F2.2)",
+          "telephoto": "48MP长焦(F2.1,OIS)",
+          "zoom": "3.5倍光变/100倍数字"
+        },
+        "front": "13MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5050mAh",
+        "charging": {
+          "wired": "100W",
+          "wireless": "80W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 6599,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-04-18",
+      "features": [
+        "双卫星通信",
+        "双向北斗卫星消息",
+        "16GB大内存"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_Pura 70 Ultra_1762254257212",
+      "brand": "华为",
+      "model": "Pura 70 Ultra",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟9010",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "16GB",
+        "storage": [
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.8英寸",
+        "resolution": "2844×1260",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP伸缩主摄(f/1.6-f/4.0)",
+          "ultra_wide": "40MP超广角(f/2.2)",
+          "telephoto": "50MP微距长焦(f/2.1,OIS)",
+          "zoom": "3.5倍光变/100倍数字"
+        },
+        "front": "13MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5200mAh",
+        "charging": {
+          "wired": "100W",
+          "wireless": "80W",
+          "reverse": "20W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 6899,
+          "currency": "CNY",
+          "note": "电商参考价"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-04-18",
+      "features": [
+        "伸缩主摄",
+        "超聚光微距长焦",
+        "玄武钢化昆仑玻璃",
+        "独特影像玩法"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_nova 12 标准版_1762254257212",
+      "brand": "华为",
+      "model": "nova 12 标准版",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟8000",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "未明确",
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.7英寸",
+        "resolution": "2412×1084",
+        "refresh_rate": "120Hz",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(f/1.9,RYYB)",
+          "ultra_wide": "8MP超广角微距(f/2.2)",
+          "zoom": "10倍数字变焦"
+        },
+        "front": "60MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "4600mAh",
+        "charging": {
+          "wired": "100W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 2999,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2023-12-26",
+      "features": [
+        "RYYB超感光",
+        "前置高像素",
+        "轻薄设计"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_nova 12 Pro_1762254257212",
+      "brand": "华为",
+      "model": "nova 12 Pro",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟8000",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "未明确",
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.76英寸",
+        "resolution": "2776×1224",
+        "refresh_rate": "",
+        "type": "直面屏"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP可变光圈主摄",
+          "ultra_wide": "8MP超广角微距"
+        },
+        "front": "60MP+8MP人像特写",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "4600mAh",
+        "charging": {
+          "wired": "100W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 3999,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2023-12-26",
+      "features": [
+        "前置双摄",
+        "可变光圈",
+        "人像特写",
+        "AIS防抖"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_nova 12 活力版_1762254257212",
+      "brand": "华为",
+      "model": "nova 12 活力版",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "骁龙778G 4G",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "未明确",
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.7英寸",
+        "resolution": "2412×1084",
+        "refresh_rate": "120Hz",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(f/1.9)",
+          "ultra_wide": "8MP超广角微距(f/2.2)"
+        },
+        "front": "60MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "4500mAh",
+        "charging": {
+          "wired": "66W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 2499,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2023-12-26",
+      "features": [
+        "骁龙芯片",
+        "最轻薄nova",
+        "66W快充"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_nova 12 Ultra_1762254257212",
+      "brand": "华为",
+      "model": "nova 12 Ultra",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟9000SL",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "12GB",
+        "storage": [
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.76英寸",
+        "resolution": "2776×1224",
+        "refresh_rate": "1-120Hz LTPO",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP可变光圈主摄(RYYB)",
+          "ultra_wide": "8MP超广角微距"
+        },
+        "front": "60MP+8MP人像特写",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "4600mAh",
+        "charging": {
+          "wired": "100W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 4699,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2023-12-26",
+      "features": [
+        "RYYB超感光滤色阵列",
+        "LTPO屏幕",
+        "物理可变光圈"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_nova 13_1762254257212",
+      "brand": "华为",
+      "model": "nova 13",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟芯片(未明确)",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "未明确",
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.7英寸",
+        "resolution": "2412×1084",
+        "refresh_rate": "120Hz",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(f/1.9)",
+          "ultra_wide": "8MP超广角微距(f/2.2)",
+          "zoom": "10倍数字变焦"
+        },
+        "front": "60MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": {
+          "wired": "100W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 2699,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-10-22",
+      "features": [
+        "双向北斗消息",
+        "100W快充",
+        "系列特性"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_nova 14_1762254257212",
+      "brand": "华为",
+      "model": "nova 14",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟8000",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "未明确",
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.7英寸",
+        "resolution": "2412×1084",
+        "refresh_rate": "120Hz",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(f/1.9)",
+          "ultra_wide": "8MP超广角",
+          "telephoto": "12MP直立长焦(OIS)"
+        },
+        "front": "50MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "100W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 2699,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-05-19",
+      "features": [
+        "HarmonyOS 5",
+        "IP65防护",
+        "直立长焦",
+        "2160Hz PWM"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_nova 14 Pro_1762254257212",
+      "brand": "华为",
+      "model": "nova 14 Pro",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟8020",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "未明确",
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.78英寸",
+        "resolution": "2776×1224",
+        "refresh_rate": "120Hz",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP可变光圈主摄(RYYB,OIS)",
+          "ultra_wide": "8MP超广角",
+          "telephoto": "12MP直立长焦(RYYB,OIS)",
+          "special": "红枫原色"
+        },
+        "front": "50MP+8MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "100W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 3499,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-05-19",
+      "features": [
+        "红枫原色镜头",
+        "RYYB传感器",
+        "可变光圈",
+        "HarmonyOS 5"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_nova 14 Ultra_1762254257212",
+      "brand": "华为",
+      "model": "nova 14 Ultra",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟8020",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "未明确",
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.81英寸",
+        "resolution": "2860×1272",
+        "refresh_rate": "120Hz LTPO",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP可变光圈主摄(RYYB,OIS)",
+          "ultra_wide": "13MP超广角(RYYB)",
+          "telephoto": "50MP潜望长焦(RYYB,OIS)",
+          "special": "红枫原色"
+        },
+        "front": "50MP+8MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "100W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 4499,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-05-19",
+      "features": [
+        "天通北斗双卫星通信",
+        "潜望长焦",
+        "LTPO屏幕",
+        "IP68/69防护"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_畅享 70_1762254257212",
+      "brand": "华为",
+      "model": "畅享 70",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟710A",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "未明确",
+        "storage": [
+          "128GB",
+          "256GB"
+        ]
+      },
+      "display": {
+        "size": "6.75英寸",
+        "resolution": "1600×720",
+        "refresh_rate": "",
+        "type": "LCD"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄",
+          "macro": "2MP微距"
+        },
+        "front": "8MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "6000mAh",
+        "charging": {
+          "wired": "22.5W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "官网未明确",
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "官网未明确",
+      "features": [
+        "长续航",
+        "LCD大屏",
+        "基础拍摄"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_畅享 70X_1762254257212",
+      "brand": "华为",
+      "model": "畅享 70X",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟8000A",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "未明确",
+        "storage": [
+          "128GB",
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.78英寸",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": "未明确"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP RYYB主摄",
+          "depth": "2MP景深"
+        },
+        "front": "未明确",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "6100mAh(典型)",
+        "charging": {
+          "wired": "有线功率未明确(媒体称高功率)"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 1799,
+          "ending_price": 2299,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-01-03",
+      "features": [
+        "北斗卫星通信",
+        "入门价位卫星通信",
+        "长续航",
+        "RYYB主摄"
+      ],
+      "description": ""
+    },
+    {
+      "id": "华为_Mate X5_1762254257212",
+      "brand": "华为",
+      "model": "Mate X5",
+      "series": "",
+      "category": "",
+      "processor": {
+        "brand": "",
+        "model": "麒麟9000S",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "12GB/16GB",
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP超感知",
+          "ultra_wide": "13MP超广角",
+          "telephoto": "12MP潜望长焦(OIS)"
+        },
+        "front": "8MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5060mAh",
+        "charging": {
+          "wired": "66W",
+          "wireless": "50W",
+          "reverse": "7.5W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 13999,
+          "ending_price": 16999,
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2023-09-08",
+      "features": [
+        "折叠形态",
+        "双向北斗卫星消息",
+        "大屏体验",
+        "多任务处理"
+      ],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀Magic6 Pro_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀Magic6 Pro",
+      "series": "旗舰直板",
+      "category": "旗舰直板",
+      "processor": {
+        "brand": "",
+        "model": "第三代骁龙8",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": {
+          "rom": [
+            "256GB",
+            "512GB",
+            "1TB"
+          ],
+          "rom_type": "UFS 4.0"
+        }
+      },
+      "display": {
+        "size": "6.8英寸",
+        "resolution": "2800×1280",
+        "refresh_rate": "120Hz",
+        "type": "全域低功耗LTPO护眼屏"
+      },
+      "camera": {
+        "rear": {
+          "main": "5000万像素超动态鹰眼主摄(F1.4/2.0可变光圈，OIS)",
+          "ultra_wide": "5000万像素超广角摄像头",
+          "telephoto": "1.8亿像素潜望长焦(F2.6，OIS，2.5X光学变焦，100X最大变焦)"
+        },
+        "front": {
+          "main": "5000万像素主摄",
+          "depth": "TOF深感摄像头"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5600mAh",
+        "charging": {
+          "wired": "80W有线快充",
+          "wireless": "66W无线快充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "12GB+256GB": "5699元",
+          "16GB+512GB": "6199元",
+          "16GB+1TB": "6699元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-01-11",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀Magic V3_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀Magic V3",
+      "series": "折叠屏",
+      "category": "折叠屏",
+      "processor": {
+        "brand": "",
+        "model": "高通骁龙8 Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "官方未在发布会页完整列示矩阵"
+        ],
+        "storage": {
+          "rom": [
+            "以当地销售实物为准"
+          ],
+          "rom_type": "以当地销售实物为准"
+        }
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "5000万像素主摄",
+          "ultra_wide": "4000万像素超广角微距",
+          "telephoto": "5000万像素3.5倍光学变焦(OIS)"
+        },
+        "front": {
+          "outer": "2000万像素",
+          "inner": "2000万像素"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5150mAh",
+        "charging": {
+          "wired": "66W有线",
+          "wireless": "50W无线"
+        }
+      },
+      "price": {
+        "start_price": {
+          "12+256GB": "8999元",
+          "16+512GB": "9999元",
+          "16GB+1TB": "10999元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-07-12",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀Magic Vs3_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀Magic Vs3",
+      "series": "折叠屏",
+      "category": "折叠屏",
+      "processor": {
+        "brand": "",
+        "model": "高通骁龙8 Gen2",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "官方未在发布会页完整列示矩阵"
+        ],
+        "storage": {
+          "rom": [
+            "以当地销售实物为准"
+          ],
+          "rom_type": "以当地销售实物为准"
+        }
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "5000万像素主摄",
+          "ultra_wide": "4000万像素超广角微距",
+          "telephoto": "800万像素5倍光学变焦(OIS)"
+        },
+        "front": {
+          "outer": "1600万像素",
+          "inner": "1600万像素"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": {
+          "wired": "66W有线",
+          "wireless": "50W无线"
+        }
+      },
+      "price": {
+        "start_price": {
+          "12+256GB": "6999元",
+          "12+512GB": "7699元",
+          "16GB+1TB": "8699元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-07-12",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀Magic7 Pro_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀Magic7 Pro",
+      "series": "旗舰直板",
+      "category": "旗舰直板",
+      "processor": {
+        "brand": "",
+        "model": "骁龙8至尊版",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": {
+          "rom": [
+            "256GB",
+            "512GB",
+            "1TB"
+          ],
+          "rom_type": "UFS 4.0"
+        }
+      },
+      "display": {
+        "size": "6.80英寸AI自然光绿洲护眼屏",
+        "resolution": "1280×2800",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "5000万像素超动态鹰眼主摄H9000(1/1.3英寸，OIS，F1.4-F2.0超大智能可变光圈)",
+          "ultra_wide": "5000万像素超广角(122°超广视角，2.5cm高清微距摄影)",
+          "telephoto": "2亿像素超清潜望长焦(F2.6光圈，OIS，1/1.4英寸，100X数字变焦)"
+        },
+        "front": {
+          "main": "5000万像素主摄",
+          "depth": "3D深感摄像头"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5850mAh",
+        "charging": {
+          "wired": "100W有线快充",
+          "wireless": "80W无线快充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "12GB+256GB": "5699元",
+          "16GB+512GB": "6199元",
+          "16GB+1TB": "6699元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-10-30",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀Magic V5_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀Magic V5",
+      "series": "折叠屏",
+      "category": "折叠屏",
+      "processor": {
+        "brand": "",
+        "model": "高通骁龙8 Elite(骁龙8至尊版)",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "官方新闻稿未完整列示矩阵"
+        ],
+        "storage": {
+          "rom": [
+            "以当地销售实物为准"
+          ],
+          "rom_type": "以当地销售实物为准"
+        }
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄",
+          "ultra_wide": "50MP超广角",
+          "telephoto": "64MP潜望长焦"
+        },
+        "front": "未公开",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "6100mAh硅碳(1TB版)",
+        "charging": {
+          "wired": "66W有线",
+          "wireless": "50W无线"
+        }
+      },
+      "price": {
+        "start_price": {
+          "起价": "8999元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-07-02",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀200_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀200",
+      "series": "影像旗舰",
+      "category": "影像旗舰",
+      "processor": {
+        "brand": "",
+        "model": "第三代骁龙7芯片",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB",
+          "16GB"
+        ],
+        "storage": {
+          "rom": [
+            "256GB",
+            "512GB"
+          ],
+          "rom_type": "UFS 4.0"
+        }
+      },
+      "display": {
+        "size": "6.7英寸OLED曲面屏",
+        "resolution": "2664×1200",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "5000万像素主摄",
+          "ultra_wide": "1200万像素超广角",
+          "macro": "500万像素微距"
+        },
+        "front": {
+          "main": "3200万像素主摄"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5200mAh青海湖电池",
+        "charging": {
+          "wired": "100W有线快充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "官网促销价": "1699元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024年",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀200 Pro_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀200 Pro",
+      "series": "影像旗舰",
+      "category": "影像旗舰",
+      "processor": {
+        "brand": "",
+        "model": "第三代骁龙8s芯片",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": {
+          "rom": [
+            "256GB",
+            "512GB",
+            "1TB"
+          ],
+          "rom_type": "UFS 4.0"
+        }
+      },
+      "display": {
+        "size": "6.78英寸OLED曲面屏",
+        "resolution": "2700×1224",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "5000万像素主摄",
+          "ultra_wide": "1200万像素超广角",
+          "telephoto": "5000万像素长焦人像镜头"
+        },
+        "front": {
+          "main": "5000万像素主摄"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5200mAh青海湖电池",
+        "charging": {
+          "wired": "100W有线快充",
+          "wireless": "66W无线快充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "官网促销价": "2199元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024年",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀300_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀300",
+      "series": "影像旗舰",
+      "category": "影像旗舰",
+      "processor": {
+        "brand": "",
+        "model": "第三代骁龙7芯片",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB",
+          "16GB"
+        ],
+        "storage": {
+          "rom": [
+            "256GB",
+            "512GB"
+          ],
+          "rom_type": "UFS 4.0"
+        }
+      },
+      "display": {
+        "size": "6.70英寸超窄边直屏",
+        "resolution": "2664×1200",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "5000万像素IMX906主摄(1/1.56英寸，OIS+EIS)",
+          "ultra_wide": "1200万像素超广角(112°超广角拍摄)"
+        },
+        "front": {
+          "main": "5000万像素主摄"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5300mAh青海湖电池",
+        "charging": {
+          "wired": "100W有线快充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "8GB+256GB": "2299元",
+          "12GB+256GB": "2499元",
+          "12GB+512GB": "2799元",
+          "16GB+512GB": "2999元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-12-02",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀300 Pro_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀300 Pro",
+      "series": "影像旗舰",
+      "category": "影像旗舰",
+      "processor": {
+        "brand": "",
+        "model": "第三代骁龙8芯片",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": {
+          "rom": [
+            "256GB",
+            "512GB"
+          ],
+          "rom_type": "UFS 4.0"
+        }
+      },
+      "display": {
+        "size": "6.78英寸四曲面屏幕",
+        "resolution": "2700×1224",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "5000万像素IMX906主摄(1/1.56英寸，OIS+EIS)",
+          "ultra_wide": "1200万像素超广角(112°超广角拍摄)",
+          "telephoto": "5000万像素IMX 856长焦(OIS+EIS，50X数字变焦)"
+        },
+        "front": {
+          "main": "5000万像素主摄"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5300mAh青海湖电池",
+        "charging": {
+          "wired": "100W有线快充",
+          "wireless": "80W无线快充",
+          "reverse": "反向充电"
+        }
+      },
+      "price": {
+        "start_price": {
+          "官网促销价": "3699元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-12-02",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀300 Ultra_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀300 Ultra",
+      "series": "影像旗舰",
+      "category": "影像旗舰",
+      "processor": {
+        "brand": "",
+        "model": "第三代骁龙8芯片",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": {
+          "rom": [
+            "512GB",
+            "1TB"
+          ],
+          "rom_type": "UFS 4.0"
+        }
+      },
+      "display": {
+        "size": "6.78英寸四曲面屏幕",
+        "resolution": "2700×1224",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "5000万像素IMX906主摄(1/1.56英寸，OIS+EIS)",
+          "ultra_wide": "1200万像素超广角(112°超广角拍摄)",
+          "telephoto": "5000万像素IMX 858长焦(OIS+EIS，3.8X光学变焦，100X数字变焦)"
+        },
+        "front": {
+          "main": "5000万像素主摄"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5300mAh青海湖电池",
+        "charging": {
+          "wired": "100W有线快充",
+          "wireless": "80W无线快充",
+          "reverse": "反向充电"
+        }
+      },
+      "price": {
+        "start_price": {
+          "官网促销价": "3399元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-12-02",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀400_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀400",
+      "series": "影像旗舰",
+      "category": "影像旗舰",
+      "processor": {
+        "brand": "",
+        "model": "高通骁龙7 Gen4芯片",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB",
+          "16GB"
+        ],
+        "storage": {
+          "rom": [
+            "256GB",
+            "512GB",
+            "1TB"
+          ],
+          "rom_type": "UFS 4.0"
+        }
+      },
+      "display": {
+        "size": "6.55英寸荣耀绿洲护眼屏幕",
+        "resolution": "2736×1264",
+        "refresh_rate": "120Hz",
+        "type": "OLED材质"
+      },
+      "camera": {
+        "rear": {
+          "main": "2亿AI超清主摄",
+          "ultra_wide": "1200万像素超广角(OIS+EIS双防抖)"
+        },
+        "front": {
+          "main": "5000万像素专业人像镜头"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "7200mAh青海湖电池",
+        "charging": {
+          "wired": "80W有线超级快充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "12GB+256GB": "2499元",
+          "12GB+512GB": "2799元",
+          "16GB+512GB": "2999元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-05-28",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀400 Pro_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀400 Pro",
+      "series": "影像旗舰",
+      "category": "影像旗舰",
+      "processor": {
+        "brand": "",
+        "model": "高通骁龙8 Gen3满血版",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": {
+          "rom": [
+            "256GB",
+            "512GB",
+            "1TB"
+          ],
+          "rom_type": "UFS 4.0"
+        }
+      },
+      "display": {
+        "size": "6.55英寸荣耀绿洲护眼屏幕",
+        "resolution": "2736×1264",
+        "refresh_rate": "120Hz",
+        "type": "OLED材质"
+      },
+      "camera": {
+        "rear": {
+          "main": "2亿AI超清主摄",
+          "ultra_wide": "1200万像素超广角",
+          "telephoto": "5000万像素长焦人像镜头",
+          "macro": "112°超广角微距镜头(OIS+EIS双防抖)"
+        },
+        "front": {
+          "main": "5000万像素专业人像镜头"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "7200mAh青海湖电池",
+        "charging": {
+          "wired": "90W有线超级快充",
+          "wireless": "50W无线超级快充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "12GB+256GB": "3399元",
+          "12GB+512GB": "3699元",
+          "16GB+512GB": "3999元",
+          "16GB+1TB": "4499元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-05-28",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀X70_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀X70",
+      "series": "中端",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "高通骁龙6 Gen4(第四代骁龙6)",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB"
+        ],
+        "storage": {
+          "rom": [
+            "128GB",
+            "256GB",
+            "512GB"
+          ],
+          "rom_type": "未公开"
+        }
+      },
+      "display": {
+        "size": "6.79英寸AMOLED直屏",
+        "resolution": "2640×1200",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(OIS)"
+        },
+        "front": {
+          "main": "8MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "8300mAh",
+        "charging": {
+          "wired": "80W有线",
+          "wireless": "512GB版支持80W无线"
+        }
+      },
+      "price": {
+        "start_price": {
+          "8GB+128GB": "1399元",
+          "8GB+256GB": "1599元",
+          "12GB+256GB": "1799元",
+          "12GB+512GB": "1999元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-07-15",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀Play9C_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀Play9C",
+      "series": "入门",
+      "category": "入门",
+      "processor": {
+        "brand": "",
+        "model": "联发科天玑6100+",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "6GB",
+          "8GB"
+        ],
+        "storage": {
+          "rom": [
+            "128GB",
+            "256GB"
+          ],
+          "rom_type": "未公开"
+        }
+      },
+      "display": {
+        "size": "6.56英寸LCD水滴屏",
+        "resolution": "720×1612",
+        "refresh_rate": "90Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "13MP"
+        },
+        "front": {
+          "main": "5MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5200mAh(典型值)",
+        "charging": {
+          "wired": "标配5V2A充电器(有线功率以官方参数页为准)"
+        }
+      },
+      "price": {
+        "start_price": {
+          "6GB+128GB": "799元",
+          "8GB+256GB": "999元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-09-23",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀Play10T_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀Play10T",
+      "series": "入门",
+      "category": "入门",
+      "processor": {
+        "brand": "",
+        "model": "高通骁龙6S Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB"
+        ],
+        "storage": {
+          "rom": [
+            "128GB",
+            "256GB"
+          ],
+          "rom_type": "UFS 2.1"
+        }
+      },
+      "display": {
+        "size": "6.8英寸LCD",
+        "resolution": "2412×1080",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(F/1.80)"
+        },
+        "front": {
+          "main": "5MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "7000mAh",
+        "charging": {
+          "wired": "45W有线快充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "8GB+128GB": "999元",
+          "8GB+256GB": "1199元",
+          "12GB+256GB": "1399元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-09-16",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "荣耀_荣耀GT_1762254257217",
+      "brand": "荣耀",
+      "model": "荣耀GT",
+      "series": "性能",
+      "category": "性能",
+      "processor": {
+        "brand": "",
+        "model": "高通骁龙8 Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": {
+          "rom": [
+            "256GB",
+            "512GB",
+            "1TB"
+          ],
+          "rom_type": "UFS 4.0"
+        }
+      },
+      "display": {
+        "size": "6.7英寸AMOLED直屏",
+        "resolution": "2664×1200",
+        "refresh_rate": "120Hz",
+        "type": ""
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP主摄(1/1.56英寸，OIS)",
+          "ultra_wide": "12MP超广角微距"
+        },
+        "front": {
+          "main": "16MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5300mAh",
+        "charging": {
+          "wired": "100W有线快充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "12GB+256GB": "2199元",
+          "16GB+256GB": "2399元",
+          "12GB+512GB": "2599元",
+          "16GB+512GB": "2899元",
+          "16GB+1TB": "3299元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-12-16",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "小米_小米15_1762254257223",
+      "brand": "小米",
+      "model": "小米15",
+      "series": "小米15系列",
+      "category": "中端",
+      "processor": {
+        "brand": "高通",
+        "model": "骁龙8至尊版",
+        "process": "台积电第二代3nm",
+        "gpu": "Adreno GPU"
+      },
+      "memory": {
+        "ram": "LPDDR5X",
+        "storage": "UFS 4.0"
+      },
+      "display": {
+        "size": "官方未完整公开",
+        "resolution": "官方未完整公开",
+        "refresh_rate": "官方未完整公开",
+        "type": "官方未完整公开"
+      },
+      "camera": {
+        "rear": "官方未完整公开",
+        "front": "官方未完整公开",
+        "features": "官方未完整公开"
+      },
+      "battery": {
+        "capacity": "5400mAh",
+        "charging": {
+          "wired": "90W有线快充",
+          "wireless": "50W无线快充",
+          "features": "支持磁吸无线充生态"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "4499元",
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-10-29",
+      "features": [
+        "小屏旗舰",
+        "磁吸无线充生态"
+      ],
+      "description": ""
+    },
+    {
+      "id": "小米_小米15 Pro_1762254257223",
+      "brand": "小米",
+      "model": "小米15 Pro",
+      "series": "小米15系列",
+      "category": "中端",
+      "processor": {
+        "brand": "高通",
+        "model": "骁龙8至尊版",
+        "process": "台积电第二代3nm",
+        "gpu": "Adreno GPU"
+      },
+      "memory": {
+        "ram": "LPDDR5X",
+        "storage": "UFS 4.0"
+      },
+      "display": {
+        "size": "6.73英寸",
+        "resolution": "3200×1440",
+        "refresh_rate": "1-120Hz LTPO",
+        "type": "2K LTPO"
+      },
+      "camera": {
+        "rear": "Pro级影像系统",
+        "front": "官方未完整公开",
+        "features": "需核验具体参数"
+      },
+      "battery": {
+        "capacity": "6100mAh",
+        "charging": {
+          "wired": "90W有线快充",
+          "wireless": "50W无线快充",
+          "features": "澎湃P3+G1电源管理"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "5299元",
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-10-29",
+      "features": [
+        "2K超级阳光屏",
+        "长续航",
+        "旗舰影像"
+      ],
+      "description": ""
+    },
+    {
+      "id": "小米_小米15 Ultra_1762254257223",
+      "brand": "小米",
+      "model": "小米15 Ultra",
+      "series": "小米15系列",
+      "category": "中端",
+      "processor": {
+        "brand": "高通",
+        "model": "骁龙8至尊版",
+        "process": "台积电第二代3nm",
+        "gpu": "Adreno 830 GPU"
+      },
+      "memory": {
+        "ram": "LPDDR5X",
+        "storage": "UFS 4.1"
+      },
+      "display": {
+        "size": "6.73英寸",
+        "resolution": "3200×1440",
+        "refresh_rate": "120Hz LTPO",
+        "type": "2K LTPO"
+      },
+      "camera": {
+        "rear": {
+          "main": "5000万像素1英寸LYT-900 (F1.63)",
+          "ultra_wide": "5000万像素 (F2.2)",
+          "telephoto": "5000万像素浮动长焦 (IMX858, F1.8)",
+          "periscope": "2亿像素潜望长焦 (三星HP9, F2.6)"
+        },
+        "front": "3200万像素",
+        "features": [
+          "物理可变光圈",
+          "OIS/EIS光学防抖",
+          "徕卡超纯光学系统",
+          "8K/4K/1080p多帧率视频"
+        ]
+      },
+      "battery": {
+        "capacity": "6000mAh",
+        "charging": {
+          "wired": "90W有线快充",
+          "wireless": "80W无线快充",
+          "reverse": "18W反向充电"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "6499元",
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-02-27",
+      "features": [
+        "徕卡超纯光学系统",
+        "双向卫星通信",
+        "Hi-Res音频",
+        "Wi-Fi 7",
+        "IP68防水",
+        "超声波屏下指纹"
+      ],
+      "description": ""
+    },
+    {
+      "id": "小米_Redmi K80_1762254257223",
+      "brand": "小米",
+      "model": "Redmi K80",
+      "series": "Redmi K80系列",
+      "category": "中端",
+      "processor": {
+        "brand": "高通",
+        "model": "骁龙8至尊版",
+        "process": "台积电4nm",
+        "gpu": "Adreno GPU"
+      },
+      "memory": {
+        "ram": "LPDDR5X",
+        "storage": "UFS 4.0"
+      },
+      "display": {
+        "size": "6.67英寸",
+        "resolution": "3200×1440",
+        "refresh_rate": "120Hz",
+        "type": "2K护眼直屏"
+      },
+      "camera": {
+        "rear": "光影猎人800旗舰影像系统",
+        "front": "官方未完整公开",
+        "features": "具体多摄构成与参数需核验"
+      },
+      "battery": {
+        "capacity": "6550mAh",
+        "charging": {
+          "wired": "90W闪充",
+          "wireless": "不支持",
+          "features": ""
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "2499元",
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-11-27",
+      "features": [
+        "5400mm²双环路3D冰封散热",
+        "IP68防水防尘(2.5m/30min)"
+      ],
+      "description": ""
+    },
+    {
+      "id": "小米_Redmi K80 Pro_1762254257223",
+      "brand": "小米",
+      "model": "Redmi K80 Pro",
+      "series": "Redmi K80系列",
+      "category": "中端",
+      "processor": {
+        "brand": "高通",
+        "model": "骁龙8至尊版 + D1独显",
+        "process": "台积电4nm",
+        "gpu": "Adreno GPU + D1游戏独显(12nm)"
+      },
+      "memory": {
+        "ram": "LPDDR5X",
+        "storage": "UFS 4.0"
+      },
+      "display": {
+        "size": "6.67英寸",
+        "resolution": "3200×1440",
+        "refresh_rate": "120Hz",
+        "type": "2K直屏"
+      },
+      "camera": {
+        "rear": {
+          "main": "光影猎人800 50MP主摄(1/1.55英寸, OIS)",
+          "telephoto": "50MP浮动长焦",
+          "ultra_wide": "32MP超广角"
+        },
+        "front": "20MP",
+        "features": [
+          "Xiaomi AISP影像平台",
+          "OIS光学防抖"
+        ]
+      },
+      "battery": {
+        "capacity": "6000mAh",
+        "charging": {
+          "wired": "120W有线快充",
+          "wireless": "50W无线快充",
+          "features": "澎湃P3+G1电源管理, 支持QC3+/PD2.0/PD3.0"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "3699元",
+          "detailed_prices": {
+            "12+256": "3699元",
+            "12+512": "3999元",
+            "16+512": "4299元",
+            "16+1TB": "4299元",
+            "champion_16+1TB": "4999元"
+          },
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-11-27",
+      "features": [
+        "IP68防水防尘(2.5m/30min)",
+        "小米星辰通信",
+        "Wi-Fi 7",
+        "立体声双扬声器",
+        "Hi-Res音频认证",
+        "狂暴引擎4.0"
+      ],
+      "description": ""
+    },
+    {
+      "id": "小米_Redmi Note 14 Pro_1762254257223",
+      "brand": "小米",
+      "model": "Redmi Note 14 Pro",
+      "series": "Redmi Note系列",
+      "category": "中端",
+      "processor": {
+        "brand": "联发科",
+        "model": "天玑7300-Ultra",
+        "process": "台积电6nm",
+        "gpu": "Mali-G615 MC2"
+      },
+      "memory": {
+        "ram": "LPDDR4X",
+        "storage": "UFS 2.2"
+      },
+      "display": {
+        "size": "6.67英寸",
+        "resolution": "2712×1220",
+        "refresh_rate": "120Hz",
+        "type": "1.5K护眼屏"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP索尼LYT-600 (F1.5, OIS)",
+          "ultra_wide": "8MP",
+          "macro": "2MP"
+        },
+        "front": "20MP",
+        "features": [
+          "OIS光学防抖",
+          "后置4K/1080p视频录制"
+        ]
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "45W有线快充",
+          "wireless": "不支持",
+          "features": ""
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "1149元",
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-09-26",
+      "features": [
+        "IP66/68/69级防水防尘",
+        "NFC近场通信",
+        "红外遥控",
+        "屏下指纹识别"
+      ],
+      "description": ""
+    },
+    {
+      "id": "小米_Redmi Turbo 4_1762254257223",
+      "brand": "小米",
+      "model": "Redmi Turbo 4",
+      "series": "Redmi Turbo系列",
+      "category": "中端",
+      "processor": {
+        "brand": "联发科",
+        "model": "天玑8400-Ultra",
+        "process": "台积电4nm",
+        "gpu": "Mali-G615 MC6"
+      },
+      "memory": {
+        "ram": "LPDDR5X",
+        "storage": "UFS 4.0"
+      },
+      "display": {
+        "size": "官方未完整公开",
+        "resolution": "官方未完整公开",
+        "refresh_rate": "120Hz",
+        "type": "1.5K LTPS直屏"
+      },
+      "camera": {
+        "rear": {
+          "main": "50MP索尼LYT-600主摄",
+          "ultra_wide": "8MP超广角"
+        },
+        "front": "20MP",
+        "features": "需核验具体参数"
+      },
+      "battery": {
+        "capacity": "6500mAh",
+        "charging": {
+          "wired": "90W有线快充",
+          "wireless": "不支持",
+          "features": ""
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "1999元",
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-01",
+      "features": [
+        "性能/能效平衡",
+        "长续航",
+        "IP68防水"
+      ],
+      "description": ""
+    },
+    {
+      "id": "小米_Redmi A3_1762254257223",
+      "brand": "小米",
+      "model": "Redmi A3",
+      "series": "Redmi A系列",
+      "category": "入门",
+      "processor": {
+        "brand": "联发科",
+        "model": "Helio G36",
+        "process": "12nm",
+        "gpu": "PowerVR GE8320"
+      },
+      "memory": {
+        "ram": "LPDDR4X",
+        "storage": "eMMC 5.1"
+      },
+      "display": {
+        "size": "6.71英寸",
+        "resolution": "1650×720",
+        "refresh_rate": "90Hz",
+        "type": "LCD"
+      },
+      "camera": {
+        "rear": {
+          "main": "8MP主摄",
+          "secondary": "QVGA副摄"
+        },
+        "front": "5MP",
+        "features": [
+          "1080p/720p@30fps视频录制"
+        ]
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": {
+          "wired": "10W充电",
+          "wireless": "不支持",
+          "features": "USB-C接口"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "633元",
+          "currency": "CNY",
+          "note": "印度卢比7299换算价格"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-02",
+      "features": [
+        "侧面指纹识别",
+        "AI面部解锁",
+        "3.5mm耳机孔",
+        "双SIM卡+microSD卡槽",
+        "承诺2次Android大版本更新",
+        "3年安全修复"
+      ],
+      "description": ""
+    },
+    {
+      "id": "小米_Xiaomi Civi 4 Pro_1762254257223",
+      "brand": "小米",
+      "model": "Xiaomi Civi 4 Pro",
+      "series": "Xiaomi Civi系列",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "高通",
+        "model": "第三代骁龙8s",
+        "process": "台积电4nm",
+        "gpu": "Adreno GPU"
+      },
+      "memory": {
+        "ram": "LPDDR5X",
+        "storage": "UFS 4.0"
+      },
+      "display": {
+        "size": "6.55英寸",
+        "resolution": "2750×1236",
+        "refresh_rate": "120Hz",
+        "type": "全等深微曲屏"
+      },
+      "camera": {
+        "rear": {
+          "main": "徕卡光学专业人像三摄",
+          "ultra_wide": "官方未完整公开",
+          "telephoto": "官方未完整公开"
+        },
+        "front": {
+          "main": "32MP",
+          "secondary": "32MP双主摄"
+        },
+        "features": [
+          "徕卡人像",
+          "小米影像大脑"
+        ]
+      },
+      "battery": {
+        "capacity": "4700mAh",
+        "charging": {
+          "wired": "67W快充",
+          "wireless": "不支持",
+          "features": "需核验"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "2999元",
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-03-21",
+      "features": [
+        "徕卡人像",
+        "轻薄设计",
+        "全等深微曲屏",
+        "4184mm²环形冷泵散热"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_Find X7 Ultra_1762254257227",
+      "brand": "OPPO",
+      "model": "Find X7 Ultra",
+      "series": "Find",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "",
+        "model": "第三代骁龙8",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.82英寸",
+        "resolution": "3168×1440",
+        "refresh_rate": "1–120Hz",
+        "type": "LTPO OLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP",
+            "sensor": "一英寸大底"
+          },
+          {
+            "type": "超广角",
+            "resolution": "50MP"
+          },
+          {
+            "type": "潜望长焦",
+            "resolution": "双潜望长焦"
+          }
+        ],
+        "front": "待补充",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "等效5000mAh",
+        "charging": {
+          "wired": "100W",
+          "wireless": "50W",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 5999,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-01-08",
+      "features": [
+        "一英寸大底主摄+双潜望长焦",
+        "2K LTPO高亮屏",
+        "100W+50W充电组合",
+        "旗舰影像"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_Find X7_1762254257227",
+      "brand": "OPPO",
+      "model": "Find X7",
+      "series": "Find",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "",
+        "model": "天玑9300",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.78英寸",
+        "resolution": "2780×1264",
+        "refresh_rate": "1–120Hz",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP"
+          },
+          {
+            "type": "超广角",
+            "resolution": "50MP"
+          },
+          {
+            "type": "潜望长焦",
+            "resolution": "64MP"
+          }
+        ],
+        "front": "待补充",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "等效5000mAh",
+        "charging": {
+          "wired": "100W",
+          "wireless": "不支持",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 3999,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-01-08",
+      "features": [
+        "超光影三主摄",
+        "1.5K高亮屏",
+        "百瓦快充",
+        "旗舰体验均衡"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_Find X8_1762254257227",
+      "brand": "OPPO",
+      "model": "Find X8",
+      "series": "Find",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "",
+        "model": "天玑9400",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "待补充",
+        "storage": ""
+      },
+      "display": {
+        "size": "6.59英寸",
+        "resolution": "1.5K",
+        "refresh_rate": "120Hz",
+        "type": "AMOLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "5000万"
+          },
+          {
+            "type": "超广角",
+            "resolution": "待补充"
+          },
+          {
+            "type": "潜望长焦",
+            "resolution": "含潜望"
+          }
+        ],
+        "front": "待补充",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5630mAh",
+        "charging": {
+          "wired": "80W",
+          "wireless": "50W",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 4199,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-10-24",
+      "features": [
+        "天玑9400旗舰性能",
+        "1.5K直屏",
+        "潮汐引擎x天玑9400",
+        "AI游戏性能"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_Find X8 Pro_1762254257227",
+      "brand": "OPPO",
+      "model": "Find X8 Pro",
+      "series": "Find",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "",
+        "model": "天玑9400",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "至高16GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.78英寸",
+        "resolution": "1.5K",
+        "refresh_rate": "120Hz",
+        "type": "LTPO AMOLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP"
+          },
+          {
+            "type": "超广角",
+            "resolution": "50MP"
+          },
+          {
+            "type": "3倍潜望长焦",
+            "resolution": "50MP"
+          },
+          {
+            "type": "6倍潜望长焦",
+            "resolution": "50MP"
+          }
+        ],
+        "front": "待补充",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5910mAh",
+        "charging": {
+          "wired": "80W",
+          "wireless": "50W",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 5299,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-10-24",
+      "features": [
+        "双潜望长焦(3×/6×)",
+        "全焦段抓拍",
+        "人像质感",
+        "AI千里长焦",
+        "山海通信",
+        "天穹架构"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_Find X8 Ultra_1762254257227",
+      "brand": "OPPO",
+      "model": "Find X8 Ultra",
+      "series": "Find",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "",
+        "model": "骁龙8至尊版",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.82英寸",
+        "resolution": "2K",
+        "refresh_rate": "120Hz",
+        "type": "LTPO OLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "五摄系统",
+            "resolution": "含双潜望"
+          }
+        ],
+        "front": "待补充",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "等效6100mAh",
+        "charging": {
+          "wired": "100W",
+          "wireless": "50W",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 6499,
+          "currency": "CNY",
+          "source": "渠道/媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-04-10",
+      "features": [
+        "直屏超大杯",
+        "LUMO凝光影像",
+        "全链路原彩ProXDR",
+        "夜景人像",
+        "长焦画质"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_Reno12_1762254257227",
+      "brand": "OPPO",
+      "model": "Reno12",
+      "series": "Reno",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "天玑8250星速版",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.7英寸",
+        "resolution": "2412×1080",
+        "refresh_rate": "120Hz",
+        "type": "AMOLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP"
+          },
+          {
+            "type": "人像",
+            "resolution": "50MP"
+          },
+          {
+            "type": "超广角",
+            "resolution": "112°超广角"
+          }
+        ],
+        "front": "50MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": {
+          "wired": "80W",
+          "wireless": "不支持",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 2699,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-05-23",
+      "features": [
+        "前置高像素",
+        "人像与胶片风格",
+        "实况照片",
+        "轻薄手感"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_Reno12 Pro_1762254257227",
+      "brand": "OPPO",
+      "model": "Reno12 Pro",
+      "series": "Reno",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "天玑9200+星速版",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.7英寸",
+        "resolution": "2412×1080",
+        "refresh_rate": "120Hz",
+        "type": "AMOLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP"
+          },
+          {
+            "type": "人像",
+            "resolution": "50MP"
+          },
+          {
+            "type": "超广角",
+            "resolution": "112°超广角"
+          }
+        ],
+        "front": "50MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": {
+          "wired": "80W",
+          "wireless": "不支持",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 3399,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-05-23",
+      "features": [
+        "前置高像素",
+        "人像与胶片风格",
+        "实况照片",
+        "轻薄设计",
+        "更高性能平台"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_Reno13_1762254257227",
+      "brand": "OPPO",
+      "model": "Reno13",
+      "series": "Reno",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "天玑8350",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.59英寸",
+        "resolution": "1.5K",
+        "refresh_rate": "120Hz",
+        "type": "AMOLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP"
+          },
+          {
+            "type": "超广角",
+            "resolution": "8MP"
+          }
+        ],
+        "front": "50MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5600mAh",
+        "charging": {
+          "wired": "80W",
+          "wireless": "不支持",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 2699,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-11-25",
+      "features": [
+        "1.5K直屏",
+        "天玑8350",
+        "大电池",
+        "轻薄设计"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_Reno13 Pro_1762254257227",
+      "brand": "OPPO",
+      "model": "Reno13 Pro",
+      "series": "Reno",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "天玑8350",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.83英寸",
+        "resolution": "2800×1272",
+        "refresh_rate": "120Hz",
+        "type": "AMOLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP"
+          },
+          {
+            "type": "超广角",
+            "resolution": "8MP"
+          },
+          {
+            "type": "长焦",
+            "resolution": "50MP"
+          }
+        ],
+        "front": "50MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5800mAh",
+        "charging": {
+          "wired": "80W",
+          "wireless": "50W",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 3299,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-11-25",
+      "features": [
+        "等深四曲直屏",
+        "50W无线充",
+        "大电池",
+        "旗舰芯",
+        "轻薄与大电池兼得"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_A3_1762254257227",
+      "brand": "OPPO",
+      "model": "A3",
+      "series": "A",
+      "category": "入门",
+      "processor": {
+        "brand": "",
+        "model": "骁龙695 5G",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.70英寸",
+        "resolution": "2412×1080",
+        "refresh_rate": "120Hz",
+        "type": "AMOLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP"
+          },
+          {
+            "type": "人像",
+            "resolution": "2MP"
+          }
+        ],
+        "front": "8MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": {
+          "wired": "45W",
+          "wireless": "不支持",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "待补充",
+          "currency": "CNY"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024年",
+      "features": [
+        "轻薄设计",
+        "AMOLED高刷",
+        "入门体验",
+        "超亮阳光屏"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_A3 Pro_1762254257227",
+      "brand": "OPPO",
+      "model": "A3 Pro",
+      "series": "A",
+      "category": "入门",
+      "processor": {
+        "brand": "",
+        "model": "天玑7050",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.70英寸",
+        "resolution": "2412×1080",
+        "refresh_rate": "120Hz",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "64MP"
+          },
+          {
+            "type": "人像",
+            "resolution": "2MP"
+          }
+        ],
+        "front": "8MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": {
+          "wired": "67W",
+          "wireless": "不支持",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 1999,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-04-12",
+      "features": [
+        "耐用科技3.0",
+        "IP66/68/69满级防水",
+        "满级防水2.0",
+        "耐摔结构",
+        "耐用战神"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_A5 Pro_1762254257227",
+      "brand": "OPPO",
+      "model": "A5 Pro",
+      "series": "A",
+      "category": "入门",
+      "processor": {
+        "brand": "",
+        "model": "天玑7300",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.7英寸",
+        "resolution": "2412×1080",
+        "refresh_rate": "120Hz",
+        "type": "AMOLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP"
+          },
+          {
+            "type": "黑白",
+            "resolution": "2MP"
+          }
+        ],
+        "front": "16MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "6000mAh",
+        "charging": {
+          "wired": "80W",
+          "wireless": "不支持",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 1999,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-12-24",
+      "features": [
+        "耐用科技3.0",
+        "IP66/68/69满级防水",
+        "满级防水2.0",
+        "耐摔结构",
+        "大电池+快充",
+        "耐用战神"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_A3i_1762254257227",
+      "brand": "OPPO",
+      "model": "A3i",
+      "series": "A",
+      "category": "入门",
+      "processor": {
+        "brand": "",
+        "model": "天玑6300",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "6GB",
+          "8GB",
+          "12GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.67英寸",
+        "resolution": "1604×720",
+        "refresh_rate": "120Hz",
+        "type": "LCD"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP",
+            "source": "媒体口径"
+          }
+        ],
+        "front": "待补充",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5100mAh",
+        "charging": {
+          "wired": "45W",
+          "wireless": "不支持",
+          "source": "媒体口径"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 1099,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-10-16",
+      "features": [
+        "入门LCD高刷",
+        "大音量",
+        "长续航",
+        "千元入门"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_K12_1762254257227",
+      "brand": "OPPO",
+      "model": "K12",
+      "series": "K",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "第三代骁龙7",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.7英寸",
+        "resolution": "2412×1080",
+        "refresh_rate": "120Hz",
+        "type": "AMOLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP"
+          },
+          {
+            "type": "超广角",
+            "resolution": "8MP"
+          }
+        ],
+        "front": "16MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "100W长寿闪充",
+          "wireless": "不支持",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 1799,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-04-24",
+      "features": [
+        "超抗摔金刚石架构",
+        "十面耐摔",
+        "100W长寿闪充",
+        "长续航",
+        "耐摔"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_K12x_1762254257227",
+      "brand": "OPPO",
+      "model": "K12x",
+      "series": "K",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "骁龙695",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.67英寸",
+        "resolution": "2400×1080",
+        "refresh_rate": "120Hz",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP"
+          },
+          {
+            "type": "黑白",
+            "resolution": "2MP"
+          }
+        ],
+        "front": "16MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "80W",
+          "wireless": "不支持",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 1299,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-05-14",
+      "features": [
+        "OLED直屏",
+        "80W快充",
+        "长续航",
+        "四年耐用"
+      ],
+      "description": ""
+    },
+    {
+      "id": "OPPO_K12 Plus_1762254257227",
+      "brand": "OPPO",
+      "model": "K12 Plus",
+      "series": "K",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "第三代骁龙7",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB"
+        ],
+        "storage": ""
+      },
+      "display": {
+        "size": "6.7英寸",
+        "resolution": "2412×1080",
+        "refresh_rate": "120Hz",
+        "type": "AMOLED"
+      },
+      "camera": {
+        "rear": [
+          {
+            "type": "主摄",
+            "resolution": "50MP"
+          },
+          {
+            "type": "超广角",
+            "resolution": "8MP"
+          }
+        ],
+        "front": "16MP",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "6400mAh",
+        "charging": {
+          "wired": "80W",
+          "wireless": "不支持",
+          "reverse_wireless": "待补充"
+        }
+      },
+      "price": {
+        "start_price": {
+          "starting_price": 1799,
+          "currency": "CNY",
+          "source": "媒体"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-10-12",
+      "features": [
+        "6400mAh超大电池",
+        "80W快充",
+        "长续航",
+        "游戏性能",
+        "至韧美学"
+      ],
+      "description": ""
+    },
+    {
+      "id": "vivo_X100_1762254257232",
+      "brand": "vivo",
+      "model": "X100",
+      "series": "X系列",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "",
+        "model": "天玑9300",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB UFS4.0"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+50MP超广+64MP蔡司长焦",
+        "front": "32MP",
+        "features": [
+          "蔡司光学",
+          "OIS"
+        ]
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": "120W有线快充"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "3999元起",
+          "storage_variants": {
+            "8+256": "3999元",
+            "12+256": "4299元",
+            "16+512": "4999元"
+          }
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2023-11",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_X100 Pro_1762254257232",
+      "brand": "vivo",
+      "model": "X100 Pro",
+      "series": "X系列",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "",
+        "model": "天玑9300",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB UFS4.0"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+50MP超广+64MP蔡司长焦",
+        "front": "32MP",
+        "features": [
+          "蔡司光学",
+          "OIS"
+        ]
+      },
+      "battery": {
+        "capacity": "5400mAh",
+        "charging": "120W有线快充"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "4999元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2023-11",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_X100 Ultra_1762254257232",
+      "brand": "vivo",
+      "model": "X100 Ultra",
+      "series": "X系列",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "",
+        "model": "骁龙8 Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB/1TB UFS4.0"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP LYT-900主摄+50MP超广+200MP HP9长焦",
+        "front": "32MP",
+        "features": [
+          "蔡司光学",
+          "OIS",
+          "200MP长焦"
+        ]
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": "80W有线+30W无线"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "6499元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-05",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_X Fold3 Pro_1762254257232",
+      "brand": "vivo",
+      "model": "X Fold3 Pro",
+      "series": "X系列",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "",
+        "model": "骁龙8 Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "512GB/1TB UFS4.0"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+50MP超广+64MP潜望长焦",
+        "front": "32MP双摄",
+        "features": [
+          "蔡司光学",
+          "OIS",
+          "折叠屏"
+        ]
+      },
+      "battery": {
+        "capacity": "等效5700mAh",
+        "charging": "100W有线+50W无线"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "9999元",
+          "storage_variants": {
+            "16+512": "9999元",
+            "16+1TB": "10999元"
+          }
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-03",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_X200_1762254257232",
+      "brand": "vivo",
+      "model": "X200",
+      "series": "X系列",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "",
+        "model": "天玑9400",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB/1TB UFS4.0"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "蓝图影像传感器主摄+长焦",
+        "front": "32MP",
+        "features": [
+          "蔡司光学",
+          "OIS",
+          "长焦微距",
+          "4K 120fps视频"
+        ]
+      },
+      "battery": {
+        "capacity": "待补充",
+        "charging": "待补充"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "4299元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-10",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_X200 Pro_1762254257232",
+      "brand": "vivo",
+      "model": "X200 Pro",
+      "series": "X系列",
+      "category": "高端旗舰",
+      "processor": {
+        "brand": "",
+        "model": "天玑9400",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB/1TB UFS4.0"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "蓝图影像传感器主摄+长焦",
+        "front": "32MP",
+        "features": [
+          "蔡司光学",
+          "OIS",
+          "长焦微距",
+          "4K 120fps视频"
+        ]
+      },
+      "battery": {
+        "capacity": "待补充",
+        "charging": "待补充"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "5299元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-10",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_S18_1762254257232",
+      "brand": "vivo",
+      "model": "S18",
+      "series": "S系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "骁龙7 Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB UFS2.2"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+8MP超广角",
+        "front": "50MP",
+        "features": [
+          "OIS",
+          "影棚级人像",
+          "柔光灯"
+        ]
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": "80W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "2299元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2023-12",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_S18 Pro_1762254257232",
+      "brand": "vivo",
+      "model": "S18 Pro",
+      "series": "S系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "天玑9200+",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB UFS3.1"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+50MP超广+12MP长焦",
+        "front": "50MP",
+        "features": [
+          "OIS",
+          "三摄系统"
+        ]
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": "80W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "3199元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2023-12",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_S19_1762254257232",
+      "brand": "vivo",
+      "model": "S19",
+      "series": "S系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "骁龙7 Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB UFS2.2"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+8MP超广角",
+        "front": "50MP",
+        "features": [
+          "OIS",
+          "柔光环",
+          "防畸变追焦"
+        ]
+      },
+      "battery": {
+        "capacity": "6000mAh",
+        "charging": "80W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "2499元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-05/06",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_S19 Pro_1762254257232",
+      "brand": "vivo",
+      "model": "S19 Pro",
+      "series": "S系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "天玑9200+",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB UFS3.1"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+8MP超广+50MP人像中焦",
+        "front": "50MP",
+        "features": [
+          "OIS",
+          "柔光环",
+          "2X人像中焦"
+        ]
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": "80W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "3299元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-05/06",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_S20_1762254257232",
+      "brand": "vivo",
+      "model": "S20",
+      "series": "S系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "骁龙7 Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB UFS2.2"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+8MP超广角",
+        "front": "50MP",
+        "features": [
+          "OIS",
+          "柔光",
+          "EIS防抖"
+        ]
+      },
+      "battery": {
+        "capacity": "6500mAh",
+        "charging": "90W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "2299元",
+          "storage_variants": {
+            "8+256": "2299元",
+            "12+256": "2599元",
+            "12+512": "2799元",
+            "16+512": "2999元"
+          }
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-11",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_Y300 Pro_1762254257232",
+      "brand": "vivo",
+      "model": "Y300 Pro",
+      "series": "Y系列",
+      "category": "入门",
+      "processor": {
+        "brand": "",
+        "model": "骁龙7s Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "128/256/512GB UFS2.2"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+2MP辅助",
+        "front": "32MP",
+        "features": [
+          "人像拍摄"
+        ]
+      },
+      "battery": {
+        "capacity": "待补充",
+        "charging": "待补充"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "1799元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-03",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "vivo_Y300 Pro+_1762254257232",
+      "brand": "vivo",
+      "model": "Y300 Pro+",
+      "series": "Y系列",
+      "category": "入门",
+      "processor": {
+        "brand": "",
+        "model": "骁龙7s Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "128/256/512GB UFS2.2"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+2MP辅助",
+        "front": "32MP",
+        "features": [
+          "人像拍摄"
+        ]
+      },
+      "battery": {
+        "capacity": "7300mAh",
+        "charging": "90W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "1799元",
+          "storage_variants": {
+            "8+128": "1799元",
+            "8+256": "1999元",
+            "12+256": "2199元",
+            "12+512": "2499元"
+          }
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2025-03",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "iQOO_iQOO 13_1762254257232",
+      "brand": "iQOO",
+      "model": "iQOO 13",
+      "series": "数字系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "骁龙8至尊版",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256GB/512GB/1TB UFS4.0"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+50MP长焦+50MP超广角",
+        "front": "32MP",
+        "features": [
+          "OIS",
+          "8K视频",
+          "三摄系统"
+        ]
+      },
+      "battery": {
+        "capacity": "等效6150mAh",
+        "charging": "120W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "3999元",
+          "storage_variants": {
+            "12+256": "3999元",
+            "12+512": "4499元",
+            "16+256": "4299元",
+            "16+512": "4699元",
+            "16+1TB": "5199元"
+          }
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-10",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "iQOO_Neo10_1762254257232",
+      "brand": "iQOO",
+      "model": "Neo10",
+      "series": "Neo系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "骁龙8 Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB UFS4.1"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+8MP超广角",
+        "front": "16MP",
+        "features": [
+          "OIS",
+          "电竞芯片Q2"
+        ]
+      },
+      "battery": {
+        "capacity": "等效6100mAh",
+        "charging": "120W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "2299元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-11",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "iQOO_Neo10 Pro_1762254257232",
+      "brand": "iQOO",
+      "model": "Neo10 Pro",
+      "series": "Neo系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "天玑9400",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB/1TB UFS4.1"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+50MP超广角",
+        "front": "16MP",
+        "features": [
+          "OIS",
+          "8K视频",
+          "双摄均支持防抖"
+        ]
+      },
+      "battery": {
+        "capacity": "等效6100mAh",
+        "charging": "120W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "3199元起",
+          "storage_variants": {
+            "12+256": "3199元",
+            "12+512": "3499元",
+            "16+256": "3399元",
+            "16+512": "3799元",
+            "16+1TB": "4299元"
+          }
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-11",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "iQOO_Z9_1762254257232",
+      "brand": "iQOO",
+      "model": "Z9",
+      "series": "Z系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "骁龙7 Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB UFS2.2"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+2MP景深",
+        "front": "16MP",
+        "features": [
+          "入门性能均衡"
+        ]
+      },
+      "battery": {
+        "capacity": "6000mAh",
+        "charging": "80W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "1499元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-04/06",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "iQOO_Z9 Turbo_1762254257232",
+      "brand": "iQOO",
+      "model": "Z9 Turbo",
+      "series": "Z系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "骁龙8s Gen3",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "256/512GB UFS4.0"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP主摄+8MP超广角",
+        "front": "16MP",
+        "features": [
+          "OIS",
+          "Turbo独显"
+        ]
+      },
+      "battery": {
+        "capacity": "6000mAh",
+        "charging": "80W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "1999元"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-04",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "iQOO_Z9x_1762254257232",
+      "brand": "iQOO",
+      "model": "Z9x",
+      "series": "Z系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": "骁龙6 Gen1",
+        "process": "",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": "",
+        "storage": "128/256GB UFS2.2"
+      },
+      "display": {
+        "size": "",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "50MP+2MP",
+        "front": "8MP",
+        "features": [
+          "入门长续航"
+        ]
+      },
+      "battery": {
+        "capacity": "6000mAh",
+        "charging": "44W"
+      },
+      "price": {
+        "start_price": {
+          "starting_price": "1199元起"
+        },
+        "currency": "CNY"
+      },
+      "release_date": "2024-04/06",
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "一加_OnePlus 13_1762254257236",
+      "brand": "一加",
+      "model": "OnePlus 13",
+      "series": "数字系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙8 Elite",
+          "cpu": "Oryon V2架构",
+          "gpu": "Adreno 830",
+          "process": "3nm",
+          "ai_engine": "高性能AI引擎"
+        },
+        "process": "3nm",
+        "gpu": "Adreno 830"
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB",
+          "24GB"
+        ],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.82英寸",
+        "resolution": "1440×3168",
+        "refresh_rate": "120Hz",
+        "type": "LTPO 4.1 AMOLED"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP LYT-808",
+            "aperture": "f/1.6",
+            "ois": true
+          },
+          "ultrawide": {
+            "sensor": "50MP",
+            "field_of_view": "120°"
+          },
+          "telephoto": {
+            "sensor": "50MP潜望式长焦",
+            "zoom": "3X光学变焦"
+          }
+        },
+        "front": {
+          "sensor": "32MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "6000mAh",
+        "charging": {
+          "wired": "100W SUPERVOOC",
+          "wireless": "50W AIRVOOC",
+          "reverse": "10W无线/5W有线"
+        }
+      },
+      "price": {
+        "start_price": {
+          "usd": "$699",
+          "eur": "€829.5",
+          "inr": "₹63,999"
+        },
+        "currency": "CNY"
+      },
+      "release_date": {
+        "china": "2024-10-31",
+        "global": "2025-01-07"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "一加_OnePlus 12_1762254257236",
+      "brand": "一加",
+      "model": "OnePlus 12",
+      "series": "数字系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙8 Gen 3",
+          "cpu": "Kryo",
+          "gpu": "Adreno 750",
+          "process": "4nm",
+          "ai_engine": "高性能AI引擎"
+        },
+        "process": "4nm",
+        "gpu": "Adreno 750"
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.82英寸",
+        "resolution": "3168×1440",
+        "refresh_rate": "1-120Hz自适应",
+        "type": "LTPO AMOLED"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP LYT-808",
+            "size": "1/1.4英寸",
+            "ois": true
+          },
+          "ultrawide": {
+            "sensor": "48MP",
+            "field_of_view": "114°"
+          },
+          "telephoto": {
+            "sensor": "64MP潜望式长焦",
+            "zoom": "3X光学变焦/6X混合变焦",
+            "max_zoom": "120X超分"
+          }
+        },
+        "front": {
+          "sensor": "32MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5400mAh",
+        "charging": {
+          "wired": "100W SUPERVOOC",
+          "wireless": "50W AIRVOOC"
+        }
+      },
+      "price": {
+        "start_price": "",
+        "currency": "CNY"
+      },
+      "release_date": {
+        "china": "2023-12",
+        "global": "2024-01-23"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "一加_OnePlus 12R_1762254257236",
+      "brand": "一加",
+      "model": "OnePlus 12R",
+      "series": "数字系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙8 Gen 2",
+          "cpu": "Kryo",
+          "gpu": "Adreno 740",
+          "process": "4nm",
+          "ai_engine": "中等AI性能"
+        },
+        "process": "4nm",
+        "gpu": "Adreno 740"
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "16GB"
+        ],
+        "storage": [
+          "128GB",
+          "256GB"
+        ]
+      },
+      "display": {
+        "size": "6.78英寸",
+        "resolution": "2780×1264",
+        "refresh_rate": "1-120Hz动态刷新",
+        "type": "LTPO4.0 AMOLED"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP IMX890",
+            "ois": true,
+            "eis": true
+          },
+          "ultrawide": {
+            "sensor": "8MP",
+            "field_of_view": "112°"
+          },
+          "macro": {
+            "sensor": "2MP微距"
+          }
+        },
+        "front": {
+          "sensor": "16MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "80W SUPERVOOC"
+        }
+      },
+      "price": {
+        "start_price": "",
+        "currency": "CNY"
+      },
+      "release_date": {
+        "global": "2024-01-23",
+        "market": "2024-02"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "一加_OnePlus Ace 3 Pro_1762254257236",
+      "brand": "一加",
+      "model": "OnePlus Ace 3 Pro",
+      "series": "Ace系列",
+      "category": "入门",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙8 Gen 3",
+          "cpu": "Kryo",
+          "gpu": "Adreno 750",
+          "process": "4nm",
+          "ai_engine": "高性能AI引擎"
+        },
+        "process": "4nm",
+        "gpu": "Adreno 750"
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB",
+          "24GB"
+        ],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.78英寸",
+        "resolution": "2780×1264",
+        "refresh_rate": "1-120Hz自适应",
+        "type": "3D AMOLED曲面屏"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP",
+            "ois": true
+          },
+          "ultrawide": {
+            "sensor": "8MP"
+          },
+          "macro": {
+            "sensor": "2MP微距"
+          }
+        },
+        "front": {
+          "sensor": "16MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "6100mAh",
+        "charging": {
+          "wired": "100W SUPERVOOC"
+        }
+      },
+      "price": {
+        "start_price": "",
+        "currency": "CNY"
+      },
+      "release_date": {
+        "year": "2024"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "一加_OnePlus Ace 3_1762254257236",
+      "brand": "一加",
+      "model": "OnePlus Ace 3",
+      "series": "Ace系列",
+      "category": "入门",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙8 Gen 2",
+          "cpu": "Kryo",
+          "gpu": "Adreno 740",
+          "process": "4nm",
+          "ai_engine": "中等AI性能"
+        },
+        "process": "4nm",
+        "gpu": "Adreno 740"
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.78英寸",
+        "resolution": "2780×1264",
+        "refresh_rate": "1-120Hz自适应",
+        "type": "3D AMOLED曲面屏"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP",
+            "ois": true
+          },
+          "ultrawide": {
+            "sensor": "8MP"
+          },
+          "macro": {
+            "sensor": "2MP微距"
+          }
+        },
+        "front": {
+          "sensor": "16MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "100W SUPERVOOC"
+        }
+      },
+      "price": {
+        "start_price": "",
+        "currency": "CNY"
+      },
+      "release_date": {
+        "year": "2024"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "一加_OnePlus Ace 3V_1762254257236",
+      "brand": "一加",
+      "model": "OnePlus Ace 3V",
+      "series": "Ace系列",
+      "category": "入门",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙7+ Gen 3",
+          "cpu": "Kryo",
+          "gpu": "Adreno 732",
+          "process": "4nm",
+          "ai_engine": "中等AI性能"
+        },
+        "process": "4nm",
+        "gpu": "Adreno 732"
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.74英寸",
+        "resolution": "2772×1240",
+        "refresh_rate": "最高120Hz",
+        "type": "2.5D AMOLED直屏"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP IMX882",
+            "ois": true
+          },
+          "ultrawide": {
+            "sensor": "8MP"
+          }
+        },
+        "front": {
+          "sensor": "16MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "100W SUPERVOOC"
+        }
+      },
+      "price": {
+        "start_price": "",
+        "currency": "CNY"
+      },
+      "release_date": {
+        "month": "2024-03"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "一加_OnePlus 13T_1762254257236",
+      "brand": "一加",
+      "model": "OnePlus 13T",
+      "series": "数字系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙8 Elite",
+          "process": "3nm"
+        },
+        "process": "3nm",
+        "gpu": ""
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.32英寸",
+        "resolution": "",
+        "refresh_rate": "",
+        "type": ""
+      },
+      "camera": {
+        "rear": "",
+        "front": "",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "6260mAh",
+        "charging": {
+          "wired": "100W有线"
+        }
+      },
+      "price": {
+        "start_price": "",
+        "currency": "CNY"
+      },
+      "release_date": {
+        "china": "2025-04-24"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "realme_realme GT 6_1762254257236",
+      "brand": "realme",
+      "model": "realme GT 6",
+      "series": "GT系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙8s Gen 3",
+          "cpu": "Kryo",
+          "gpu": "Adreno 735",
+          "process": "4nm",
+          "ai_engine": "中高AI性能"
+        },
+        "process": "4nm",
+        "gpu": "Adreno 735"
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB",
+          "16GB"
+        ],
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.78英寸",
+        "resolution": "2780×1264",
+        "refresh_rate": "120Hz",
+        "type": "LTPO AMOLED"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP LYT-808",
+            "ois": true
+          },
+          "ultrawide": {
+            "sensor": "8MP IMX355"
+          },
+          "telephoto": {
+            "sensor": "50MP三星JN5长焦"
+          }
+        },
+        "front": {
+          "sensor": "32MP IMX615"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "120W SUPERVOOC"
+        }
+      },
+      "price": {
+        "start_price": "",
+        "currency": "CNY"
+      },
+      "release_date": {
+        "date": "2024-06-20",
+        "market": "印度等市场"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "realme_realme GT Neo6_1762254257236",
+      "brand": "realme",
+      "model": "realme GT Neo6",
+      "series": "Neo系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙8s Gen 3",
+          "cpu": "Kryo",
+          "gpu": "Adreno 735",
+          "process": "4nm",
+          "ai_engine": "中高AI性能"
+        },
+        "process": "4nm",
+        "gpu": "Adreno 735"
+      },
+      "memory": {
+        "ram": [
+          "12GB",
+          "16GB"
+        ],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "display": {
+        "size": "6.78英寸",
+        "resolution": "2780×1264",
+        "refresh_rate": "120Hz",
+        "type": "AMOLED"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP IMX882",
+            "ois": true
+          },
+          "ultrawide": {
+            "sensor": "8MP IMX355"
+          }
+        },
+        "front": {
+          "sensor": "32MP IMX615"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "120W SUPERVOOC"
+        }
+      },
+      "price": {
+        "start_price": "",
+        "currency": "CNY"
+      },
+      "release_date": {
+        "date": "2024-05-09",
+        "market": "中国市场"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "realme_realme GT 6T_1762254257236",
+      "brand": "realme",
+      "model": "realme GT 6T",
+      "series": "GT系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙7+ Gen 3",
+          "cpu": "Kryo",
+          "gpu": "Adreno 732",
+          "process": "4nm",
+          "ai_engine": "中等AI性能"
+        },
+        "process": "4nm",
+        "gpu": "Adreno 732"
+      },
+      "memory": {
+        "ram": [
+          "12GB"
+        ],
+        "storage": [
+          "256GB"
+        ]
+      },
+      "display": {
+        "size": "6.78英寸",
+        "resolution": "2780×1264",
+        "refresh_rate": "120Hz",
+        "type": "LTPO AMOLED"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP LYT-600"
+          },
+          "ultrawide": {
+            "sensor": "8MP IMX355"
+          }
+        },
+        "front": {
+          "sensor": "32MP IMX615"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5500mAh",
+        "charging": {
+          "wired": "120W SUPERVOOC"
+        }
+      },
+      "price": {
+        "start_price": "",
+        "currency": "CNY"
+      },
+      "release_date": {
+        "announcement": "2024-05-22",
+        "market": "2024-05-29",
+        "market_region": "印度等市场"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "realme_realme 14 Pro+_1762254257236",
+      "brand": "realme",
+      "model": "realme 14 Pro+",
+      "series": "数字系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙7s Gen 3",
+          "cpu": "Cortex‑A720/A520",
+          "gpu": "Adreno 810",
+          "process": "4nm",
+          "ai_engine": "中等AI性能"
+        },
+        "process": "4nm",
+        "gpu": "Adreno 810"
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB"
+        ],
+        "storage": [
+          "128GB",
+          "256GB",
+          "512GB"
+        ]
+      },
+      "display": {
+        "size": "6.83英寸",
+        "resolution": "1272×2800",
+        "refresh_rate": "120Hz",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP",
+            "size": "1/1.56英寸",
+            "ois": true
+          },
+          "ultrawide": {
+            "sensor": "8MP"
+          },
+          "telephoto": {
+            "sensor": "50MP潜望式长焦",
+            "zoom": "3X光学变焦"
+          }
+        },
+        "front": {
+          "sensor": "32MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "6000mAh",
+        "charging": {
+          "wired": "80W"
+        }
+      },
+      "price": {
+        "start_price": {
+          "usd": "$432.2",
+          "eur": "€348",
+          "inr": "₹25,700"
+        },
+        "currency": "CNY"
+      },
+      "release_date": {
+        "date": "2025-01-09",
+        "market": "印度与中国等市场"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "realme_realme 13 Plus 5G_1762254257236",
+      "brand": "realme",
+      "model": "realme 13 Plus 5G",
+      "series": "数字系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "天玑7300 Energy",
+          "cpu": "Cortex‑A78/A55",
+          "gpu": "Mali‑G68",
+          "process": "4nm",
+          "ai_engine": "中等AI性能"
+        },
+        "process": "4nm",
+        "gpu": "Mali‑G68"
+      },
+      "memory": {
+        "ram": [
+          "8GB",
+          "12GB"
+        ],
+        "storage": [
+          "128GB",
+          "256GB"
+        ]
+      },
+      "display": {
+        "size": "6.67英寸",
+        "resolution": "1080×2400",
+        "refresh_rate": "120Hz",
+        "type": "OLED"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP LYT-600",
+            "ois": true
+          }
+        },
+        "front": "",
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": {
+          "wired": "80W Ultra Charge"
+        }
+      },
+      "price": {
+        "start_price": "",
+        "currency": "CNY"
+      },
+      "release_date": {
+        "year": "2024",
+        "market": "印度市场"
+      },
+      "features": [],
+      "description": ""
+    },
+    {
+      "id": "realme_realme 12_1762254257236",
+      "brand": "realme",
+      "model": "realme 12",
+      "series": "数字系列",
+      "category": "中端",
+      "processor": {
+        "brand": "",
+        "model": {
+          "name": "骁龙685",
+          "cpu": "Cortex‑A73/A53",
+          "gpu": "Adreno 610",
+          "process": "6nm",
+          "ai_engine": "低AI性能"
+        },
+        "process": "6nm",
+        "gpu": "Adreno 610"
+      },
+      "memory": {
+        "ram": [
+          "8GB"
+        ],
+        "storage": [
+          "256GB"
+        ]
+      },
+      "display": {
+        "size": "6.67英寸",
+        "resolution": "2400×1080",
+        "refresh_rate": "120Hz",
+        "type": "E4 AMOLED"
+      },
+      "camera": {
+        "rear": {
+          "main": {
+            "sensor": "50MP LYT-600",
+            "ois": true
+          },
+          "mono": {
+            "sensor": "2MP mono"
+          }
+        },
+        "front": {
+          "sensor": "16MP"
+        },
+        "features": ""
+      },
+      "battery": {
+        "capacity": "5000mAh",
+        "charging": {
+          "wired": "67W SUPERVOOC"
+        }
+      },
+      "price": {
+        "start_price": "",
+        "currency": "CNY"
+      },
+      "release_date": {
+        "year": "2024",
+        "market": "东南亚等市场"
+      },
+      "features": [],
+      "description": ""
+    }
+  ]
+}
