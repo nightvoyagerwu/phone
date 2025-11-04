@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据加载测试</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+        .info { background-color: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <h1>手机对比工具 - 数据加载测试</h1>
+    <div id="testResults"></div>
+    
+    <script>
+        async function testDataLoading() {
+            const results = document.getElementById('testResults');
+            
+            try {
+                // 测试1: 加载JSON数据
+                addResult('正在加载数据文件...', 'info');
+                const response = await fetch('./data/all_phones_unified.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                addResult('✅ 数据文件加载成功', 'success');
+                
+                // 测试2: 验证数据结构
+                if (!data.phones || !Array.isArray(data.phones)) {
+                    throw new Error('数据格式错误：phones字段不存在或不是数组');
+                }
+                addResult('✅ 数据结构验证通过', 'success');
+                
+                // 测试3: 显示统计信息
+                const phoneCount = data.phones.length;
+                addResult(`📱 成功加载 ${phoneCount} 款手机数据`, 'success');
+                
+                // 测试4: 显示前3款手机
+                addResult('🔍 前3款手机预览:', 'info');
+                data.phones.slice(0, 3).forEach((phone, index) => {
+                    addResult(`  ${index + 1}. ${phone.brand} ${phone.model}`, 'info');
+                });
+                
+                // 测试5: 验证品牌
+                const brands = [...new Set(data.phones.map(p => p.brand))];
+                addResult(`🏢 包含品牌: ${brands.join(', ')}`, 'info');
+                
+                addResult('🎉 所有测试通过！手机对比工具应该可以正常工作。', 'success');
+                
+            } catch (error) {
+                addResult(`❌ 错误: ${error.message}`, 'error');
+                addResult('请检查：', 'error');
+                addResult('1. data/all_phones_unified.json 文件是否存在', 'error');
+                addResult('2. 文件路径是否正确', 'error');
+                addResult('3. 是否通过本地服务器访问', 'error');
+            }
+        }
+        
+        function addResult(message, type) {
+            const div = document.createElement('div');
+            div.className = `test-result ${type}`;
+            div.textContent = message;
+            document.getElementById('testResults').appendChild(div);
+        }
+        
+        // 页面加载后自动测试
+        window.addEventListener('load', testDataLoading);
+    </script>
+</body>
+</html>

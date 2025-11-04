@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024-2025年手机对比工具</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-mobile-alt"></i> 手机对比工具</h1>
+            <p>2024-2025年主流手机厂商机型数据库</p>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main">
+        <div class="container">
+            <!-- 控制面板 -->
+            <div class="control-panel">
+                <!-- 搜索框 -->
+                <div class="search-section">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="搜索手机型号、品牌或处理器...">
+                    </div>
+                </div>
+
+                <!-- 筛选器 -->
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label>品牌筛选：</label>
+                        <select id="brandFilter">
+                            <option value="">全部品牌</option>
+                            <option value="华为">华为</option>
+                            <option value="荣耀">荣耀</option>
+                            <option value="小米">小米</option>
+                            <option value="OPPO">OPPO</option>
+                            <option value="vivo">vivo</option>
+                            <option value="iQOO">iQOO</option>
+                            <option value="一加">一加</option>
+                            <option value="realme">realme</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>价位筛选：</label>
+                        <select id="priceFilter">
+                            <option value="">全部价位</option>
+                            <option value="low">入门级 (< 2000元)</option>
+                            <option value="mid">中端 (2000-4000元)</option>
+                            <option value="high">高端 (> 4000元)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>类型筛选：</label>
+                        <select id="categoryFilter">
+                            <option value="">全部类型</option>
+                            <option value="高端旗舰">高端旗舰</option>
+                            <option value="中端">中端</option>
+                            <option value="入门">入门</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button id="clearFilters" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> 清除筛选
+                        </button>
+                        <button id="compareSelected" class="btn btn-primary" disabled>
+                            <i class="fas fa-balance-scale"></i> 对比选中 (0/6)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 操作按钮 -->
+            <div class="action-buttons">
+                <button id="addPhoneBtn" class="btn btn-success">
+                    <i class="fas fa-plus"></i> 添加新机型
+                </button>
+                <button id="exportDataBtn" class="btn btn-info">
+                    <i class="fas fa-download"></i> 导出数据
+                </button>
+                <button id="importDataBtn" class="btn btn-warning">
+                    <i class="fas fa-upload"></i> 导入数据
+                </button>
+                <input type="file" id="importFileInput" accept=".json" style="display: none;">
+            </div>
+
+            <!-- 统计信息 -->
+            <div class="stats-section">
+                <div class="stats-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div>
+                        <h3 id="totalPhones">0</h3>
+                        <p>总机型数</p>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <i class="fas fa-filter"></i>
+                    <div>
+                        <h3 id="filteredPhones">0</h3>
+                        <p>当前显示</p>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <div>
+                        <h3 id="selectedPhones">0</h3>
+                        <p>已选中对比</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 手机列表 -->
+            <div class="phone-list" id="phoneList">
+                <!-- 手机卡片将通过JavaScript动态生成 -->
+            </div>
+
+            <!-- 加载状态 -->
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>正在加载手机数据...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 添加手机模态框 -->
+    <div id="addPhoneModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>添加新机型</h2>
+                <span class="close" id="closeAddModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="addPhoneForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>品牌 *</label>
+                            <select name="brand" required>
+                                <option value="">请选择品牌</option>
+                                <option value="华为">华为</option>
+                                <option value="荣耀">荣耀</option>
+                                <option value="小米">小米</option>
+                                <option value="OPPO">OPPO</option>
+                                <option value="vivo">vivo</option>
+                                <option value="iQOO">iQOO</option>
+                                <option value="一加">一加</option>
+                                <option value="realme">realme</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>型号 *</label>
+                            <input type="text" name="model" required placeholder="例如：Mate 60 Pro">
+                        </div>
+
+                        <div class="form-group">
+                            <label>系列</label>
+                            <input type="text" name="series" placeholder="例如：Mate系列">
+                        </div>
+
+                        <div class="form-group">
+                            <label>类型</label>
+                            <select name="category">
+                                <option value="高端旗舰">高端旗舰</option>
+                                <option value="中端">中端</option>
+                                <option value="入门">入门</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>处理器品牌</label>
+                            <input type="text" name="processor_brand" placeholder="例如：高通">
+                        </div>
+
+                        <div class="form-group">
+                            <label>处理器型号</label>
+                            <input type="text" name="processor_model" placeholder="例如：骁龙8 Gen 3">
+                        </div>
+
+                        <div class="form-group">
+                            <label>内存</label>
+                            <input type="text" name="memory_ram" placeholder="例如：12GB">
+                        </div>
+
+                        <div class="form-group">
+                            <label>存储</label>
+                            <input type="text" name="memory_storage" placeholder="例如：256GB">
+                        </div>
+
+                        <div class="form-group">
+                            <label>屏幕尺寸</label>
+                            <input type="text" name="display_size" placeholder="例如：6.7英寸">
+                        </div>
+
+                        <div class="form-group">
+                            <label>屏幕分辨率</label>
+                            <input type="text" name="display_resolution" placeholder="例如：2688×1216">
+                        </div>
+
+                        <div class="form-group">
+                            <label>刷新率</label>
+                            <input type="text" name="display_refresh_rate" placeholder="例如：120Hz">
+                        </div>
+
+                        <div class="form-group">
+                            <label>后置摄像头</label>
+                            <input type="text" name="camera_rear" placeholder="例如：50MP主摄">
+                        </div>
+
+                        <div class="form-group">
+                            <label>前置摄像头</label>
+                            <input type="text" name="camera_front" placeholder="例如：32MP">
+                        </div>
+
+                        <div class="form-group">
+                            <label>电池容量</label>
+                            <input type="text" name="battery_capacity" placeholder="例如：5000mAh">
+                        </div>
+
+                        <div class="form-group">
+                            <label>充电功率</label>
+                            <input type="text" name="battery_charging" placeholder="例如：100W">
+                        </div>
+
+                        <div class="form-group">
+                            <label>起售价</label>
+                            <input type="number" name="price_start_price" placeholder="例如：4999">
+                        </div>
+
+                        <div class="form-group">
+                            <label>发布时间</label>
+                            <input type="date" name="release_date">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>特色功能</label>
+                            <textarea name="features" rows="3" placeholder="请输入特色功能，用逗号分隔"></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>描述</label>
+                            <textarea name="description" rows="2" placeholder="简要描述这款手机"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="cancelAddBtn" class="btn btn-secondary">取消</button>
+                        <button type="submit" class="btn btn-primary">添加机型</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 对比模态框 -->
+    <div id="compareModal" class="modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2>机型对比</h2>
+                <span class="close" id="closeCompareModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="compareContent">
+                    <!-- 对比内容将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提示消息 -->
+    <div id="toast" class="toast"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
