@@ -181,13 +181,25 @@ function applyFilters() {
     const priceFilter = elements.priceFilter.value;
     const categoryFilter = elements.categoryFilter.value;
     
+    console.log('搜索词:', searchTerm);
+    console.log('筛选条件:', { brandFilter, priceFilter, categoryFilter });
+    
     filteredPhones = allPhones.filter(phone => {
-        // 搜索筛选
-        const matchesSearch = !searchTerm || 
-            phone.model.toLowerCase().includes(searchTerm) ||
-            phone.brand.toLowerCase().includes(searchTerm) ||
-            phone.processor.model.toLowerCase().includes(searchTerm) ||
-            phone.series.toLowerCase().includes(searchTerm);
+        // 搜索筛选 - 增强版本，处理空值
+        let matchesSearch = true;
+        if (searchTerm) {
+            const model = (phone.model || '').toLowerCase();
+            const brand = (phone.brand || '').toLowerCase();
+            const processorModel = (phone.processor?.model || '').toLowerCase();
+            const series = (phone.series || '').toLowerCase();
+            const category = (phone.category || '').toLowerCase();
+            
+            matchesSearch = model.includes(searchTerm) ||
+                           brand.includes(searchTerm) ||
+                           processorModel.includes(searchTerm) ||
+                           series.includes(searchTerm) ||
+                           category.includes(searchTerm);
+        }
         
         // 品牌筛选
         const matchesBrand = !brandFilter || phone.brand === brandFilter;
@@ -199,9 +211,17 @@ function applyFilters() {
         // 类型筛选
         const matchesCategory = !categoryFilter || phone.category === categoryFilter;
         
-        return matchesSearch && matchesBrand && matchesPrice && matchesCategory;
+        const result = matchesSearch && matchesBrand && matchesPrice && matchesCategory;
+        
+        // 调试信息
+        if (searchTerm && phone.model.toLowerCase().includes(searchTerm)) {
+            console.log(`匹配手机: ${phone.model}, 搜索: ${searchTerm}`);
+        }
+        
+        return result;
     });
     
+    console.log('筛选结果数量:', filteredPhones.length);
     displayPhones(filteredPhones);
     updateStats();
 }
@@ -241,31 +261,53 @@ function getDetailedPriceInfo(phone) {
     }
     
     const startPrice = phone.price.start_price;
+    const priceVariants = [];
     
-    // 如果是对象结构且包含详细价格信息
+    // 如果是对象结构
     if (typeof startPrice === 'object') {
-        const priceVariants = [];
         
-        // 检查是否有storage_variants
+        // 1. 检查是否有storage_variants
         if (startPrice.storage_variants) {
             Object.entries(startPrice.storage_variants).forEach(([config, price]) => {
+                // 格式化配置名称
+                let formattedConfig = config;
+                if (config.includes('+')) {
+                    formattedConfig = config.replace(/(\d+)\+(\d+)/, '$1G+$2G');
+                }
                 priceVariants.push({
-                    config: config.replace('+', 'G+') + 'G',
-                    price: price
+                    config: formattedConfig,
+                    price: typeof price === 'string' ? price : `¥${price}`
                 });
             });
         }
         
-        // 检查是否有直接的价格配置（如"12GB+256GB": "5699元"）
+        // 2. 检查是否有直接的价格配置（如"12GB+256GB": "5699元"）
         Object.entries(startPrice).forEach(([key, value]) => {
-            if (key !== 'starting_price' && key !== 'currency' && key !== 'storage_variants' && typeof value === 'string') {
-                const config = key.replace(/(\d+)GB\+(\d+)/, '$1G+$2G').replace(/(\d+)\+(\d+)/, '$1G+$2G');
-                priceVariants.push({
-                    config: config,
-                    price: value
-                });
+            if (key !== 'starting_price' && key !== 'currency' && key !== 'storage_variants') {
+                // 跳过已处理的字段
+                if (key === 'starting_price' || key === 'currency') {
+                    return;
+                }
+                
+                // 检查是否是配置价格（如"12GB+256GB": "5699元"）
+                if (typeof value === 'string' && (value.includes('元') || value.includes('¥'))) {
+                    // 格式化配置名称
+                    let formattedConfig = key;
+                    if (key.includes('GB') || key.includes('+')) {
+                        formattedConfig = key.replace(/(\d+)GB\+(\d+)/, '$1G+$2G').replace(/(\d+)\+(\d+)/, '$1G+$2G');
+                    }
+                    priceVariants.push({
+                        config: formattedConfig,
+                        price: value
+                    });
+                }
             }
         });
+        
+        // 3. 如果没有找到其他配置，但有starting_price，我们仍然返回这个基础价格
+        if (priceVariants.length === 0 && startPrice.starting_price) {
+            return null; // 让formatPriceDisplay处理基础价格
+        }
         
         return priceVariants.length > 0 ? priceVariants : null;
     }
@@ -278,18 +320,27 @@ function formatPriceDisplay(phone) {
     const basePrice = getPriceValue(phone.price);
     const detailedPrices = getDetailedPriceInfo(phone);
     
+    let priceDisplay = '';
+    
     if (detailedPrices && detailedPrices.length > 0) {
-        // 显示详细价格
+        // 显示详细价格配置
         const priceList = detailedPrices.map(variant => 
             `<div class="price-variant">${variant.config} ${variant.price}</div>`
         ).join('');
-        return priceList;
+        
+        // 如果有起售价，添加到顶部
+        if (basePrice > 0) {
+            priceDisplay += `<div class="price-base">起售价 ¥${basePrice.toLocaleString()}</div>`;
+        }
+        priceDisplay += priceList;
     } else if (basePrice > 0) {
         // 显示起售价
-        return `起售价 ¥${basePrice.toLocaleString()}`;
+        priceDisplay = `起售价 ¥${basePrice.toLocaleString()}`;
     } else {
-        return '价格未知';
+        priceDisplay = '价格未知';
     }
+    
+    return priceDisplay;
 }
 
 // 获取充电信息（处理嵌套结构）
@@ -1318,6 +1369,19 @@ style.textContent = `
     .phone-price .price-variant {
         font-size: 0.85rem;
         line-height: 1.2;
+    }
+    
+    .price-base {
+        font-weight: 600;
+        color: #e74c3c;
+        margin-bottom: 0.5rem;
+        padding: 0.2rem 0;
+        font-size: 0.95rem;
+    }
+    
+    .phone-price .price-base {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
     }
     
     .price-detail {

@@ -17,6 +17,92 @@
     <div id="testResults"></div>
     
     <script>
+        // 获取价格值（处理嵌套结构）
+        function getPriceValue(priceObj) {
+            if (!priceObj) return 0;
+            
+            // 如果是嵌套结构
+            if (priceObj.start_price && typeof priceObj.start_price === 'object') {
+                return priceObj.start_price.starting_price || 0;
+            }
+            
+            // 如果是直接数字
+            if (typeof priceObj.start_price === 'number') {
+                return priceObj.start_price;
+            }
+            
+            return 0;
+        }
+
+        // 获取充电信息（处理嵌套结构）
+        function getChargingInfo(chargingObj) {
+            if (!chargingObj) return '未知';
+            
+            // 如果是对象结构
+            if (typeof chargingObj === 'object') {
+                const wired = chargingObj.wired || '';
+                const wireless = chargingObj.wireless || '';
+                
+                if (wired && wireless) {
+                    return `${wired} (有线) / ${wireless} (无线)`;
+                } else if (wired) {
+                    return `${wired} (有线)`;
+                } else if (wireless) {
+                    return `${wireless} (无线)`;
+                }
+            }
+            
+            // 如果是字符串
+            if (typeof chargingObj === 'string') {
+                return chargingObj;
+            }
+            
+            return '未知';
+        }
+
+        // 获取存储信息（处理数组结构）
+        function getStorageInfo(storageObj) {
+            if (!storageObj) return '未知';
+            
+            // 如果是数组
+            if (Array.isArray(storageObj)) {
+                return storageObj.join(', ');
+            }
+            
+            // 如果是字符串
+            if (typeof storageObj === 'string') {
+                return storageObj;
+            }
+            
+            return '未知';
+        }
+
+        // 获取后置摄像头信息（处理嵌套结构）
+        function getRearCameraInfo(cameraObj) {
+            if (!cameraObj) return '未知';
+            
+            // 如果是对象结构
+            if (typeof cameraObj === 'object' && !Array.isArray(cameraObj)) {
+                const main = cameraObj.main || '';
+                const ultra_wide = cameraObj.ultra_wide || '';
+                const telephoto = cameraObj.telephoto || '';
+                
+                const parts = [];
+                if (main) parts.push(main);
+                if (ultra_wide) parts.push(ultra_wide);
+                if (telephoto) parts.push(telephoto);
+                
+                return parts.length > 0 ? parts.join(', ') : '未知';
+            }
+            
+            // 如果是字符串
+            if (typeof cameraObj === 'string') {
+                return cameraObj;
+            }
+            
+            return '未知';
+        }
+
         async function testDataLoading() {
             const results = document.getElementById('testResults');
             
@@ -45,7 +131,16 @@
                 // 测试4: 显示前3款手机
                 addResult('🔍 前3款手机预览:', 'info');
                 data.phones.slice(0, 3).forEach((phone, index) => {
+                    const priceValue = getPriceValue(phone.price);
+                    const storageInfo = getStorageInfo(phone.memory.storage);
+                    const chargingInfo = getChargingInfo(phone.battery.charging);
+                    const cameraInfo = getRearCameraInfo(phone.camera.rear);
+                    
                     addResult(`  ${index + 1}. ${phone.brand} ${phone.model}`, 'info');
+                    addResult(`     价格: ${priceValue > 0 ? '¥' + priceValue.toLocaleString() : '未知'}`, 'info');
+                    addResult(`     存储: ${storageInfo}`, 'info');
+                    addResult(`     充电: ${chargingInfo}`, 'info');
+                    addResult(`     摄像头: ${cameraInfo}`, 'info');
                 });
                 
                 // 测试5: 验证品牌

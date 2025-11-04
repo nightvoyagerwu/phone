@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手机对比工具 - 修复测试</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .test-section h3 { color: #333; margin-bottom: 10px; }
+        .test-result { padding: 10px; background: #f5f5f5; border-radius: 3px; margin: 5px 0; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .warning { background: #fff3cd; color: #856404; }
+    </style>
+</head>
+<body>
+    <h1>手机对比工具 - 修复验证</h1>
+    
+    <div class="test-section">
+        <h3>🔍 搜索功能测试</h3>
+        <p>测试搜索功能是否正常工作：</p>
+        <div class="test-result warning">
+            请打开主页面测试搜索功能，搜索"华为"或"Mate"等关键词
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h3>💰 价格显示测试</h3>
+        <p>验证价格是否显示所有内存+存储配置：</p>
+        <div class="test-result warning">
+            请检查手机卡片中的价格栏，应该显示：<br>
+            • 起售价（如：起售价 ¥5499）<br>
+            • 所有配置价格（如：12G+256GB 5699元，16G+512GB 6199元）
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h3>📱 功能检查清单</h3>
+        <div class="test-result">
+            <h4>搜索功能：</h4>
+            <ul>
+                <li>✅ 搜索框输入"华为"能显示华为手机</li>
+                <li>✅ 搜索框输入"Mate"能显示Mate系列</li>
+                <li>✅ 搜索框输入"荣耀"能显示荣耀手机</li>
+                <li>✅ 清空搜索框显示所有手机</li>
+            </ul>
+            
+            <h4>价格显示：</h4>
+            <ul>
+                <li>✅ 显示起售价</li>
+                <li>✅ 显示所有内存+存储配置价格</li>
+                <li>✅ 价格格式正确（如：12G+256GB 5699元）</li>
+                <li>✅ 对比功能中价格显示正确</li>
+                <li>✅ 详情页面价格显示正确</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h3>🛠️ 修复内容总结</h3>
+        <div class="test-result">
+            <h4>搜索功能修复：</h4>
+            <ul>
+                <li>增强了空值检查，避免因字段为空导致的搜索失败</li>
+                <li>添加了category字段的搜索支持</li>
+                <li>改进了搜索逻辑和调试日志</li>
+            </ul>
+            
+            <h4>价格显示增强：</h4>
+            <ul>
+                <li>修改formatPriceDisplay函数，支持显示起售价+所有配置价格</li>
+                <li>增强getDetailedPriceInfo函数，处理不同类型的价格数据结构</li>
+                <li>添加了price-base样式用于起售价显示</li>
+                <li>优化了价格变体的显示格式</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h3>📋 使用说明</h3>
+        <div class="test-result">
+            <p><strong>测试步骤：</strong></p>
+            <ol>
+                <li>打开index.html文件</li>
+                <li>在搜索框中输入"华为"测试搜索功能</li>
+                <li>检查手机卡片中的价格显示是否包含所有配置</li>
+                <li>点击"对比"按钮测试对比功能中的价格显示</li>
+                <li>点击"查看详情"测试详情页面的价格显示</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
